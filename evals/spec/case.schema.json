@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/case.schema.json",
+  "title": "GoldenEvalCase",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "skill",
+    "layer",
+    "job",
+    "split",
+    "difficulty",
+    "source",
+    "tags",
+    "input",
+    "context",
+    "expected"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+-[0-9]{4}$"
+    },
+    "skill": {
+      "type": "string",
+      "enum": ["email", "calendar", "sheet", "escalate", "general"]
+    },
+    "layer": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4]
+    },
+    "job": {
+      "type": "string",
+      "enum": ["J1", "J2", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "J11", "J12"]
+    },
+    "split": {
+      "type": "string",
+      "enum": ["dev", "test"]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"]
+    },
+    "source": {
+      "type": "string",
+      "enum": ["synthetic", "public", "real"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string" },
+        "selection": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind"],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": ["sheet_range", "emails"]
+            },
+            "sheet": { "type": "string" },
+            "range": { "type": "string" },
+            "email_ids": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["now", "timezone", "fixtures"],
+      "properties": {
+        "now": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fixtures": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "expected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route", "escalation"],
+      "properties": {
+        "route": { "type": "string" },
+        "escalation": {
+          "type": "string",
+          "enum": ["local", "escalate"]
+        },
+        "escalate_reason": { "type": "string" },
+        "tool_calls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "args"],
+            "properties": {
+              "name": { "type": "string" },
+              "args": { "type": "object" }
+            }
+          }
+        },
+        "match": {
+          "type": "string",
+          "enum": ["exact", "structured", "sql_exec", "rubric", "safety"]
+        },
+        "sql_result": {},
+        "forbidden": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rubric": {}
+      }
+    }
+  }
+}

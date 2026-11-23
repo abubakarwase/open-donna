@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/search_email.json",
+  "title": "search_email",
+  "description": "Search the mailbox by query and/or unread/from/date filters.",
+  "type": "object",
+  "additionalProperties": false,
+  "minProperties": 1,
+  "properties": {
+    "query": {
+      "type": "string",
+      "description": "Optional free-text search query."
+    },
+    "unread": {
+      "type": "boolean",
+      "description": "When true, only unread messages."
+    },
+    "from": {
+      "type": "string",
+      "description": "Optional sender filter."
+    },
+    "after": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional lower bound (RFC 3339 with offset)."
+    },
+    "before": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional upper bound (RFC 3339 with offset)."
+    }
+  },
+  "examples": [
+    {
+      "query": "invoice",
+      "from": "bob@acme.com"
+    },
+    {
+      "unread": true
+    },
+    {
+      "query": "unread",
+      "after": "2026-11-21T00:00:00+01:00"
+    }
+  ]
+}

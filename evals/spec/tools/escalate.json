@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/escalate.json",
+  "title": "escalate",
+  "description": "Hand a task to a frontier model with user consent. Do not include raw sheet rows by default (privacy: profile and query results only unless the user allows).",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reason": {
+      "type": "string",
+      "enum": [
+        "low_confidence",
+        "multi_step",
+        "schema_failed",
+        "messy_sheet",
+        "cross_sheet_join",
+        "why_or_forecast",
+        "ambiguous",
+        "user_requested"
+      ],
+      "description": "Why the local path hands off."
+    },
+    "task": {
+      "type": "string",
+      "description": "Task description for the frontier model."
+    },
+    "payload_description": {
+      "type": "string",
+      "description": "Short description of context attached; not raw sheet rows by default."
+    }
+  },
+  "required": ["reason", "task", "payload_description"],
+  "examples": [
+    {
+      "reason": "user_requested",
+      "task": "Rewrite this long mail thread into a careful negotiation reply.",
+      "payload_description": "Thread summary and draft intent; no full mailbox dump."
+    },
+    {
+      "reason": "messy_sheet",
+      "task": "Total sales in this sheet with merged headers.",
+      "payload_description": "Sheet profile only; raw rows omitted by default."
+    }
+  ]
+}

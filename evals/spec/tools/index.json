@@ -1,0 +1,65 @@
+{
+  "version": "0.1.0",
+  "tools": [
+    {
+      "name": "search_email",
+      "skill": "email",
+      "side_effect": false,
+      "schema": "search_email.json"
+    },
+    {
+      "name": "get_thread",
+      "skill": "email",
+      "side_effect": false,
+      "schema": "get_thread.json"
+    },
+    {
+      "name": "draft_email",
+      "skill": "email",
+      "side_effect": true,
+      "schema": "draft_email.json"
+    },
+    {
+      "name": "list_events",
+      "skill": "calendar",
+      "side_effect": false,
+      "schema": "list_events.json"
+    },
+    {
+      "name": "find_free_slot",
+      "skill": "calendar",
+      "side_effect": false,
+      "schema": "find_free_slot.json"
+    },
+    {
+      "name": "create_event",
+      "skill": "calendar",
+      "side_effect": true,
+      "schema": "create_event.json"
+    },
+    {
+      "name": "update_event",
+      "skill": "calendar",
+      "side_effect": true,
+      "schema": "update_event.json"
+    },
+    {
+      "name": "cancel_event",
+      "skill": "calendar",
+      "side_effect": true,
+      "schema": "cancel_event.json"
+    },
+    {
+      "name": "query_sheet",
+      "skill": "sheet",
+      "side_effect": false,
+      "schema": "query_sheet.json"
+    },
+    {
+      "name": "escalate",
+      "skill": "escalate",
+      "side_effect": false,
+      "schema": "escalate.json"
+    }
+  ]
+}

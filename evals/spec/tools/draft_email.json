@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/draft_email.json",
+  "title": "draft_email",
+  "description": "Produce an email draft for user approval; never sends. For replies, set thread_id so to/subject may default from the thread.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "to": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "Recipient email addresses."
+    },
+    "subject": {
+      "type": "string",
+      "description": "Email subject line."
+    },
+    "body": {
+      "type": "string",
+      "description": "Email body text."
+    },
+    "thread_id": {
+      "type": "string",
+      "description": "Reply target thread; when set, to/subject may be omitted and default from the thread."
+    }
+  },
+  "required": ["body"],
+  "anyOf": [
+    {
+      "required": ["thread_id"]
+    },
+    {
+      "required": ["to", "subject"]
+    }
+  ],
+  "examples": [
+    {
+      "to": ["jane@example.com"],
+      "subject": "Roadmap update",
+      "body": "Q1 roadmap"
+    },
+    {
+      "thread_id": "thread_alex_lunch",
+      "body": "Thanks for the invite; I need to decline this time."
+    }
+  ]
+}

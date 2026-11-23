@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/find_free_slot.json",
+  "title": "find_free_slot",
+  "description": "Find a free calendar slot of a given duration after a start time.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "duration_min": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Slot length in minutes."
+    },
+    "after": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Search starts at or after this instant (RFC 3339 with offset)."
+    },
+    "before": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional upper bound for the slot (RFC 3339 with offset)."
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional attendee addresses or names."
+    }
+  },
+  "required": ["duration_min", "after"],
+  "examples": [
+    {
+      "duration_min": 30,
+      "after": "2026-11-23T09:00:00+01:00"
+    },
+    {
+      "duration_min": 30,
+      "after": "2026-11-24T12:00:00+01:00",
+      "before": "2026-11-24T18:00:00+01:00",
+      "attendees": ["sam@example.com"]
+    }
+  ]
+}

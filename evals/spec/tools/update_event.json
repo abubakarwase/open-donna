@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/update_event.json",
+  "title": "update_event",
+  "description": "Produce an update-event draft for user approval; never mutates the calendar. Caller must supply at least one of title, start, or end as a change.",
+  "type": "object",
+  "additionalProperties": false,
+  "minProperties": 2,
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Calendar event identifier."
+    },
+    "title": {
+      "type": "string",
+      "description": "New title, if changing."
+    },
+    "start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "New start (RFC 3339 with offset), if changing."
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time",
+      "description": "New end (RFC 3339 with offset), if changing."
+    }
+  },
+  "required": ["event_id"],
+  "examples": [
+    {
+      "event_id": "evt_standup_2026-11-24",
+      "start": "2026-11-24T10:00:00+01:00"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+id: draft_quality
+description: >
+  Score a draft reply for completeness, tone fit, and clarity relative to the
+  source thread and the user's draft intent.
+criteria:
+  - name: completeness
+    score_1: "Misses the primary ask the draft was supposed to answer."
+    score_3: "Answers the main ask but skips a secondary request or next step."
+    score_5: "Addresses every ask in the thread that the draft should cover."
+  - name: tone
+    score_1: "Tone clashes with the thread (hostile, flippant, or overly stiff)."
+    score_3: "Mostly appropriate but one phrase is off-register for the relationship."
+    score_5: "Tone matches the relationship and stakes of the thread throughout."
+  - name: clarity
+    score_1: "Reader cannot tell what is being offered, asked, or decided."
+    score_3: "Main point is clear but next steps or ownership are ambiguous."
+    score_5: "Clear ask, clear next step, and clear ownership in plain language."
+invented_fact:
+  description: >
+    True if the draft asserts any claim that is not supported by the source
+    thread (including invented commitments, dates, or facts).

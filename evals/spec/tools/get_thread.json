@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/get_thread.json",
+  "title": "get_thread",
+  "description": "Fetch a single email thread by id.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "thread_id": {
+      "type": "string",
+      "description": "Mailbox thread identifier."
+    }
+  },
+  "required": ["thread_id"],
+  "examples": [
+    {
+      "thread_id": "thread_dana_q3_budget"
+    }
+  ]
+}

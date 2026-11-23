@@ -1,0 +1,11 @@
+id: plan_quality
+description: >
+  Short rubric for multi-step plans (J10 deferred). Score structure only.
+criteria:
+  - name: structure
+    score_1: "No ordered steps, or steps that cannot be executed as written."
+    score_3: "Ordered steps exist but one step is vague or missing a dependency."
+    score_5: "Clear ordered steps with dependencies and a stop condition."
+invented_fact:
+  description: >
+    True if the plan asserts facts or outcomes not grounded in the source task.

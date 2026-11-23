@@ -1,0 +1,17 @@
+id: style_match
+description: >
+  Score how well a draft matches the user's writing voice and formality,
+  given style examples or a style profile (when provided in source).
+criteria:
+  - name: voice
+    score_1: "Reads like a generic assistant; no overlap with the user's phrasing habits."
+    score_3: "Some user-like phrasing, but still feels templated in places."
+    score_5: "Sentence shape and word choice clearly resemble the user's examples."
+  - name: formality
+    score_1: "Formality level is clearly wrong for the user's usual register."
+    score_3: "Mostly matching formality with one mismatched greeting or closing."
+    score_5: "Greeting, body register, and closing match the user's usual formality."
+invented_fact:
+  description: >
+    True if the draft asserts any claim that is not supported by the source
+    thread or provided style context.

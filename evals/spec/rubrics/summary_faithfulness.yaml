@@ -1,0 +1,17 @@
+id: summary_faithfulness
+description: >
+  Score an email-thread summary for faithfulness to the source thread.
+  Prefer concrete coverage of asks, dates, and owners over fluent paraphrase.
+criteria:
+  - name: coverage
+    score_1: "Omits the main ask, decision, or deadline present in the thread."
+    score_3: "Captures the core topic but drops one material detail (owner, date, or ask)."
+    score_5: "States every material ask, owner, and deadline that appears in the thread."
+  - name: precision
+    score_1: "Misstates facts from the thread (wrong amounts, people, or outcomes)."
+    score_3: "Mostly accurate but hedges or softens a clear fact from the thread."
+    score_5: "Every stated fact matches the thread wording or a faithful paraphrase."
+invented_fact:
+  description: >
+    True if the summary asserts any claim that is not supported by the source
+    thread (including invented numbers, people, or decisions).

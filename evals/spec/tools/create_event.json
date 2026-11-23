@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/create_event.json",
+  "title": "create_event",
+  "description": "Produce a create-event draft for user approval; never mutates the calendar.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Event title."
+    },
+    "start": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event start (RFC 3339 with offset)."
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event end (RFC 3339 with offset)."
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional attendee addresses."
+    }
+  },
+  "required": ["title", "start", "end"],
+  "examples": [
+    {
+      "title": "Standup",
+      "start": "2026-11-24T10:00:00+01:00",
+      "end": "2026-11-24T10:15:00+01:00"
+    },
+    {
+      "title": "Lunch with Sam",
+      "start": "2026-11-25T12:00:00+01:00",
+      "end": "2026-11-25T13:00:00+01:00",
+      "attendees": ["sam@example.com"]
+    }
+  ]
+}

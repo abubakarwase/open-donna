@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/query_sheet.json",
+  "title": "query_sheet",
+  "description": "Run DuckDB SQL against an open sheet or selected range.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sql": {
+      "type": "string",
+      "description": "DuckDB dialect SQL query."
+    },
+    "sheet": {
+      "type": "string",
+      "description": "Reference to the open sheet."
+    },
+    "range": {
+      "type": "string",
+      "description": "Optional A1-style selected range (J9)."
+    }
+  },
+  "required": ["sql", "sheet"],
+  "examples": [
+    {
+      "sql": "SELECT SUM(revenue) AS total FROM sheet",
+      "sheet": "sales"
+    },
+    {
+      "sql": "SELECT AVG(col_b) AS avg_b FROM sheet",
+      "sheet": "sales",
+      "range": "B2:B50"
+    }
+  ]
+}

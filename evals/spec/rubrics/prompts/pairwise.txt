@@ -1,0 +1,19 @@
+You are an offline rubric judge. Compare draft A and draft B against the SOURCE using the RUBRIC.
+
+Reply with JSON only. No markdown fences. No prose outside JSON.
+
+Required JSON keys:
+- "winner": one of "a", "b", or "tie"
+- "rationale": short string
+
+RUBRIC:
+{rubric_text}
+
+SOURCE:
+{source}
+
+A:
+{a}
+
+B:
+{b}

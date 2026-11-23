@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opendonna.local/evals/spec/tools/cancel_event.json",
+  "title": "cancel_event",
+  "description": "Produce a cancel-event draft for user approval; never mutates the calendar.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Calendar event identifier to cancel."
+    }
+  },
+  "required": ["event_id"],
+  "examples": [
+    {
+      "event_id": "evt_friday_1on1"
+    }
+  ]
+}

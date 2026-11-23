@@ -1,0 +1,24 @@
+{
+  "version": "0.1.0",
+  "router": {
+    "email": "Route to email skill (summarise, triage, draft, find).",
+    "calendar": "Route to calendar skill (agenda, free slot, draft create/move/cancel).",
+    "sheet": "Route to sheet skill (SQL over open sheet or selected range).",
+    "escalate": "Hand off to frontier with consent (J11 or global escalate triggers).",
+    "general": "Unsupported or chit-chat: answer or decline politely (J12); no v1 tool."
+  },
+  "escalation": {
+    "local": "Handle on-device with v1 tools; no frontier handoff.",
+    "escalate": "Hand off to a frontier model with user consent."
+  },
+  "escalate_reasons": {
+    "low_confidence": "Router confidence is low; intent unclear, do not guess.",
+    "multi_step": "Multi-step request; J10 deferred, escalate with consent in v1.",
+    "schema_failed": "Tool args failed schema validation twice; local path stuck.",
+    "messy_sheet": "Sheet is messy (merged cells, multi-header); escalate.",
+    "cross_sheet_join": "Needs a join across sheets; escalate.",
+    "why_or_forecast": "Causal or forecast question, not a lookup; escalate.",
+    "ambiguous": "Ambiguous sheet question with no clear metric or range.",
+    "user_requested": "User explicitly asked to escalate (J11 consent)."
+  }
+}
