@@ -1,0 +1,267 @@
+[
+  {
+    "description": "Sales by region",
+    "messy": false,
+    "path": "sheets/clean-01.xlsx",
+    "ref": "sheets/clean-01",
+    "sheets": [
+      "sales"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Expense ledger",
+    "messy": false,
+    "path": "sheets/clean-02.xlsx",
+    "ref": "sheets/clean-02",
+    "sheets": [
+      "expenses"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Customer invoices",
+    "messy": false,
+    "path": "sheets/clean-03.xlsx",
+    "ref": "sheets/clean-03",
+    "sheets": [
+      "invoices"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Inventory snapshot",
+    "messy": false,
+    "path": "sheets/clean-04.xlsx",
+    "ref": "sheets/clean-04",
+    "sheets": [
+      "inventory"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Timesheets",
+    "messy": false,
+    "path": "sheets/clean-05.xlsx",
+    "ref": "sheets/clean-05",
+    "sheets": [
+      "timesheets"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Sales pipeline",
+    "messy": false,
+    "path": "sheets/clean-06.xlsx",
+    "ref": "sheets/clean-06",
+    "sheets": [
+      "pipeline"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Support tickets",
+    "messy": false,
+    "path": "sheets/clean-07.xlsx",
+    "ref": "sheets/clean-07",
+    "sheets": [
+      "support"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Payroll summary",
+    "messy": false,
+    "path": "sheets/clean-08.xlsx",
+    "ref": "sheets/clean-08",
+    "sheets": [
+      "payroll"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Campaigns",
+    "messy": false,
+    "path": "sheets/clean-09.xlsx",
+    "ref": "sheets/clean-09",
+    "sheets": [
+      "campaigns"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "Subscriptions",
+    "messy": false,
+    "path": "sheets/clean-10.xlsx",
+    "ref": "sheets/clean-10",
+    "sheets": [
+      "subscriptions"
+    ],
+    "traits": [
+      "single_header",
+      "typed_columns"
+    ]
+  },
+  {
+    "description": "club budget",
+    "messy": true,
+    "path": "sheets/messy-01.xlsx",
+    "ref": "sheets/messy-01",
+    "sheets": [
+      "club_budget"
+    ],
+    "traits": [
+      "merged_cells",
+      "multi_header",
+      "totals_in_data"
+    ]
+  },
+  {
+    "description": "school fees",
+    "messy": true,
+    "path": "sheets/messy-02.xlsx",
+    "ref": "sheets/messy-02",
+    "sheets": [
+      "school_fees"
+    ],
+    "traits": [
+      "merged_cells",
+      "multi_header",
+      "totals_in_data"
+    ]
+  },
+  {
+    "description": "grant awards",
+    "messy": true,
+    "path": "sheets/messy-03.xlsx",
+    "ref": "sheets/messy-03",
+    "sheets": [
+      "grant_awards"
+    ],
+    "traits": [
+      "merged_cells",
+      "multi_header",
+      "totals_in_data"
+    ]
+  },
+  {
+    "description": "rental ledger",
+    "messy": true,
+    "path": "sheets/messy-04.xlsx",
+    "ref": "sheets/messy-04",
+    "sheets": [
+      "rental_ledger"
+    ],
+    "traits": [
+      "blank_spacers",
+      "mixed_types"
+    ]
+  },
+  {
+    "description": "event rsvp",
+    "messy": true,
+    "path": "sheets/messy-05.xlsx",
+    "ref": "sheets/messy-05",
+    "sheets": [
+      "event_rsvp"
+    ],
+    "traits": [
+      "blank_spacers",
+      "mixed_types"
+    ]
+  },
+  {
+    "description": "volunteer hours",
+    "messy": true,
+    "path": "sheets/messy-06.xlsx",
+    "ref": "sheets/messy-06",
+    "sheets": [
+      "volunteer_hours"
+    ],
+    "traits": [
+      "blank_spacers",
+      "mixed_types"
+    ]
+  },
+  {
+    "description": "bake sales",
+    "messy": true,
+    "path": "sheets/messy-07.xlsx",
+    "ref": "sheets/messy-07",
+    "sheets": [
+      "bake_sales",
+      "bakers"
+    ],
+    "traits": [
+      "multi_sheet_join"
+    ]
+  },
+  {
+    "description": "pet visits",
+    "messy": true,
+    "path": "sheets/messy-08.xlsx",
+    "ref": "sheets/messy-08",
+    "sheets": [
+      "pet_visits",
+      "owners"
+    ],
+    "traits": [
+      "multi_sheet_join"
+    ]
+  },
+  {
+    "description": "garden plots",
+    "messy": true,
+    "path": "sheets/messy-09.xlsx",
+    "ref": "sheets/messy-09",
+    "sheets": [
+      "garden_plots"
+    ],
+    "traits": [
+      "merged_cells",
+      "mixed_types",
+      "blank_spacers"
+    ]
+  },
+  {
+    "description": "donation log",
+    "messy": true,
+    "path": "sheets/messy-10.xlsx",
+    "ref": "sheets/messy-10",
+    "sheets": [
+      "donation_log"
+    ],
+    "traits": [
+      "merged_cells",
+      "mixed_types",
+      "blank_spacers"
+    ]
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "events": [
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "dana.okonkwo@example.com"
+      ],
+      "end": "2026-10-24T15:00:00+02:00",
+      "event_id": "evt_dst_ams_before",
+      "start": "2026-10-24T14:00:00+02:00",
+      "title": "Amsterdam pre-DST meeting"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "jamie.soto@example.com"
+      ],
+      "end": "2026-10-26T15:00:00+01:00",
+      "event_id": "evt_dst_ams_after",
+      "start": "2026-10-26T14:00:00+01:00",
+      "title": "Amsterdam post-DST meeting"
+    },
+    {
+      "attendees": [
+        "casey.morgan@example.com",
+        "sam@example.com"
+      ],
+      "end": "2026-10-31T16:00:00-04:00",
+      "event_id": "evt_dst_ny_before",
+      "start": "2026-10-31T15:00:00-04:00",
+      "title": "New York pre-DST meeting"
+    },
+    {
+      "attendees": [
+        "casey.morgan@example.com",
+        "alex.rivera@example.com"
+      ],
+      "end": "2026-11-02T16:00:00-05:00",
+      "event_id": "evt_dst_ny_after",
+      "start": "2026-11-02T15:00:00-05:00",
+      "title": "New York post-DST meeting"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com"
+      ],
+      "end": "2026-10-25T10:30:00+01:00",
+      "event_id": "evt_dst_ams_transition_day",
+      "start": "2026-10-25T10:00:00+01:00",
+      "title": "Amsterdam DST transition check-in"
+    },
+    {
+      "attendees": [
+        "casey.morgan@example.com"
+      ],
+      "end": "2026-11-01T10:30:00-05:00",
+      "event_id": "evt_dst_ny_transition_day",
+      "start": "2026-11-01T10:00:00-05:00",
+      "title": "New York DST transition check-in"
+    }
+  ],
+  "freebusy": {
+    "alex.rivera@example.com": [
+      {
+        "end": "2026-11-02T16:00:00-05:00",
+        "start": "2026-11-02T15:00:00-05:00"
+      }
+    ],
+    "casey.morgan@example.com": [
+      {
+        "end": "2026-10-31T16:00:00-04:00",
+        "start": "2026-10-31T15:00:00-04:00"
+      },
+      {
+        "end": "2026-11-01T10:30:00-05:00",
+        "start": "2026-11-01T10:00:00-05:00"
+      },
+      {
+        "end": "2026-11-02T16:00:00-05:00",
+        "start": "2026-11-02T15:00:00-05:00"
+      }
+    ],
+    "dana.okonkwo@example.com": [
+      {
+        "end": "2026-10-24T15:00:00+02:00",
+        "start": "2026-10-24T14:00:00+02:00"
+      }
+    ],
+    "jamie.soto@example.com": [
+      {
+        "end": "2026-10-26T15:00:00+01:00",
+        "start": "2026-10-26T14:00:00+01:00"
+      }
+    ],
+    "riley.chen@example.com": [
+      {
+        "end": "2026-10-24T15:00:00+02:00",
+        "start": "2026-10-24T14:00:00+02:00"
+      },
+      {
+        "end": "2026-10-25T10:30:00+01:00",
+        "start": "2026-10-25T10:00:00+01:00"
+      },
+      {
+        "end": "2026-10-26T15:00:00+01:00",
+        "start": "2026-10-26T14:00:00+01:00"
+      }
+    ],
+    "sam@example.com": [
+      {
+        "end": "2026-10-31T16:00:00-04:00",
+        "start": "2026-10-31T15:00:00-04:00"
+      }
+    ]
+  },
+  "owner": {
+    "email": "dst-edge@example.com",
+    "name": "DST Edge"
+  },
+  "timezone": "UTC"
+}

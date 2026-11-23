@@ -1,0 +1,110 @@
+{
+  "calendar/dst-edge": {
+    "kind": "calendar",
+    "path": "calendar/dst-edge.json"
+  },
+  "calendar/freelancer": {
+    "kind": "calendar",
+    "path": "calendar/freelancer.json"
+  },
+  "calendar/smallbiz": {
+    "kind": "calendar",
+    "path": "calendar/smallbiz.json"
+  },
+  "calendar/teamlead": {
+    "kind": "calendar",
+    "path": "calendar/teamlead.json"
+  },
+  "mailbox/freelancer": {
+    "kind": "mailbox",
+    "path": "mailbox/freelancer.json"
+  },
+  "mailbox/smallbiz": {
+    "kind": "mailbox",
+    "path": "mailbox/smallbiz.json"
+  },
+  "mailbox/teamlead": {
+    "kind": "mailbox",
+    "path": "mailbox/teamlead.json"
+  },
+  "sheets/clean-01": {
+    "kind": "sheet",
+    "path": "sheets/clean-01.xlsx"
+  },
+  "sheets/clean-02": {
+    "kind": "sheet",
+    "path": "sheets/clean-02.xlsx"
+  },
+  "sheets/clean-03": {
+    "kind": "sheet",
+    "path": "sheets/clean-03.xlsx"
+  },
+  "sheets/clean-04": {
+    "kind": "sheet",
+    "path": "sheets/clean-04.xlsx"
+  },
+  "sheets/clean-05": {
+    "kind": "sheet",
+    "path": "sheets/clean-05.xlsx"
+  },
+  "sheets/clean-06": {
+    "kind": "sheet",
+    "path": "sheets/clean-06.xlsx"
+  },
+  "sheets/clean-07": {
+    "kind": "sheet",
+    "path": "sheets/clean-07.xlsx"
+  },
+  "sheets/clean-08": {
+    "kind": "sheet",
+    "path": "sheets/clean-08.xlsx"
+  },
+  "sheets/clean-09": {
+    "kind": "sheet",
+    "path": "sheets/clean-09.xlsx"
+  },
+  "sheets/clean-10": {
+    "kind": "sheet",
+    "path": "sheets/clean-10.xlsx"
+  },
+  "sheets/messy-01": {
+    "kind": "sheet",
+    "path": "sheets/messy-01.xlsx"
+  },
+  "sheets/messy-02": {
+    "kind": "sheet",
+    "path": "sheets/messy-02.xlsx"
+  },
+  "sheets/messy-03": {
+    "kind": "sheet",
+    "path": "sheets/messy-03.xlsx"
+  },
+  "sheets/messy-04": {
+    "kind": "sheet",
+    "path": "sheets/messy-04.xlsx"
+  },
+  "sheets/messy-05": {
+    "kind": "sheet",
+    "path": "sheets/messy-05.xlsx"
+  },
+  "sheets/messy-06": {
+    "kind": "sheet",
+    "path": "sheets/messy-06.xlsx"
+  },
+  "sheets/messy-07": {
+    "kind": "sheet",
+    "path": "sheets/messy-07.xlsx"
+  },
+  "sheets/messy-08": {
+    "kind": "sheet",
+    "path": "sheets/messy-08.xlsx"
+  },
+  "sheets/messy-09": {
+    "kind": "sheet",
+    "path": "sheets/messy-09.xlsx"
+  },
+  "sheets/messy-10": {
+    "kind": "sheet",
+    "path": "sheets/messy-10.xlsx"
+  }
+}

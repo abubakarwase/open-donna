@@ -1,0 +1,295 @@
+{
+  "events": [
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "jamie.soto@example.com"
+      ],
+      "end": "2026-11-23T10:00:00+01:00",
+      "event_id": "evt_tl_week_23",
+      "start": "2026-11-23T09:00:00+01:00",
+      "title": "Planning sync"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "jamie.soto@example.com"
+      ],
+      "end": "2026-11-24T15:00:00+01:00",
+      "event_id": "evt_tl_week_24",
+      "start": "2026-11-24T14:00:00+01:00",
+      "title": "Customer review"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "jamie.soto@example.com"
+      ],
+      "end": "2026-11-25T12:00:00+01:00",
+      "event_id": "evt_tl_week_25",
+      "start": "2026-11-25T11:00:00+01:00",
+      "title": "Design critique"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "jamie.soto@example.com"
+      ],
+      "end": "2026-11-26T17:00:00+01:00",
+      "event_id": "evt_tl_week_26",
+      "start": "2026-11-26T15:00:00+01:00",
+      "title": "Hiring panel"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "jamie.soto@example.com"
+      ],
+      "end": "2026-11-27T17:00:00+01:00",
+      "event_id": "evt_tl_week_27",
+      "start": "2026-11-27T16:00:00+01:00",
+      "title": "Wrap-up"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "dana.okonkwo@example.com",
+        "sam@example.com"
+      ],
+      "end": "2026-11-24T09:15:00+01:00",
+      "event_id": "evt_standup_2026-11-24",
+      "location": "Zoom",
+      "recurrence": "FREQ=DAILY;BYDAY=MO,TU,WE,TH,FR",
+      "start": "2026-11-24T09:00:00+01:00",
+      "title": "Daily standup"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "priya.nair@example.com"
+      ],
+      "end": "2026-11-27T15:30:00+01:00",
+      "event_id": "evt_friday_1on1",
+      "recurrence": "FREQ=WEEKLY;BYDAY=FR",
+      "start": "2026-11-27T15:00:00+01:00",
+      "title": "Friday 1:1"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "billing@northwind-supplies.example.com"
+      ],
+      "end": "2026-11-24T15:00:00+01:00",
+      "event_id": "evt_tl_conflict_a",
+      "start": "2026-11-24T14:00:00+01:00",
+      "title": "Vendor call"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "taylor.kim@example.com"
+      ],
+      "end": "2026-11-24T15:30:00+01:00",
+      "event_id": "evt_tl_conflict_b",
+      "start": "2026-11-24T14:30:00+01:00",
+      "title": "Overlap design jam"
+    },
+    {
+      "all_day": true,
+      "attendees": [
+        "riley.chen@example.com"
+      ],
+      "end": "2026-11-29",
+      "event_id": "evt_tl_allday_offsite",
+      "start": "2026-11-28",
+      "title": "Company offsite"
+    },
+    {
+      "attendees": [
+        "riley.chen@example.com",
+        "sam@example.com"
+      ],
+      "end": "2026-11-24T16:30:00+01:00",
+      "event_id": "evt_tl_cross_tz_sam",
+      "start": "2026-11-24T16:00:00+01:00",
+      "title": "Sam sync"
+    },
+    {
+      "attendees": [
+        "sam@example.com",
+        "riley.chen@example.com"
+      ],
+      "end": "2026-11-24T10:45:00+01:00",
+      "event_id": "evt_sam_busy_0",
+      "start": "2026-11-24T10:00:00+01:00",
+      "title": "Sam blocked 10:00"
+    },
+    {
+      "attendees": [
+        "sam@example.com",
+        "riley.chen@example.com"
+      ],
+      "end": "2026-11-24T11:45:00+01:00",
+      "event_id": "evt_sam_busy_1",
+      "start": "2026-11-24T11:00:00+01:00",
+      "title": "Sam blocked 11:00"
+    },
+    {
+      "attendees": [
+        "sam@example.com",
+        "riley.chen@example.com"
+      ],
+      "end": "2026-11-24T13:45:00+01:00",
+      "event_id": "evt_sam_busy_2",
+      "start": "2026-11-24T13:00:00+01:00",
+      "title": "Sam blocked 13:00"
+    },
+    {
+      "attendees": [
+        "sam@example.com",
+        "riley.chen@example.com"
+      ],
+      "end": "2026-11-24T15:45:00+01:00",
+      "event_id": "evt_sam_busy_3",
+      "start": "2026-11-24T15:00:00+01:00",
+      "title": "Sam blocked 15:00"
+    }
+  ],
+  "freebusy": {
+    "billing@northwind-supplies.example.com": [
+      {
+        "end": "2026-11-24T15:00:00+01:00",
+        "start": "2026-11-24T14:00:00+01:00"
+      }
+    ],
+    "dana.okonkwo@example.com": [
+      {
+        "end": "2026-11-24T09:15:00+01:00",
+        "start": "2026-11-24T09:00:00+01:00"
+      }
+    ],
+    "jamie.soto@example.com": [
+      {
+        "end": "2026-11-23T10:00:00+01:00",
+        "start": "2026-11-23T09:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T15:00:00+01:00",
+        "start": "2026-11-24T14:00:00+01:00"
+      },
+      {
+        "end": "2026-11-25T12:00:00+01:00",
+        "start": "2026-11-25T11:00:00+01:00"
+      },
+      {
+        "end": "2026-11-26T17:00:00+01:00",
+        "start": "2026-11-26T15:00:00+01:00"
+      },
+      {
+        "end": "2026-11-27T17:00:00+01:00",
+        "start": "2026-11-27T16:00:00+01:00"
+      }
+    ],
+    "priya.nair@example.com": [
+      {
+        "end": "2026-11-27T15:30:00+01:00",
+        "start": "2026-11-27T15:00:00+01:00"
+      }
+    ],
+    "riley.chen@example.com": [
+      {
+        "end": "2026-11-23T10:00:00+01:00",
+        "start": "2026-11-23T09:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T09:15:00+01:00",
+        "start": "2026-11-24T09:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T10:45:00+01:00",
+        "start": "2026-11-24T10:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T11:45:00+01:00",
+        "start": "2026-11-24T11:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T13:45:00+01:00",
+        "start": "2026-11-24T13:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T15:00:00+01:00",
+        "start": "2026-11-24T14:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T15:00:00+01:00",
+        "start": "2026-11-24T14:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T15:30:00+01:00",
+        "start": "2026-11-24T14:30:00+01:00"
+      },
+      {
+        "end": "2026-11-24T15:45:00+01:00",
+        "start": "2026-11-24T15:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T16:30:00+01:00",
+        "start": "2026-11-24T16:00:00+01:00"
+      },
+      {
+        "end": "2026-11-25T12:00:00+01:00",
+        "start": "2026-11-25T11:00:00+01:00"
+      },
+      {
+        "end": "2026-11-26T17:00:00+01:00",
+        "start": "2026-11-26T15:00:00+01:00"
+      },
+      {
+        "end": "2026-11-27T15:30:00+01:00",
+        "start": "2026-11-27T15:00:00+01:00"
+      },
+      {
+        "end": "2026-11-27T17:00:00+01:00",
+        "start": "2026-11-27T16:00:00+01:00"
+      }
+    ],
+    "sam@example.com": [
+      {
+        "end": "2026-11-24T09:15:00+01:00",
+        "start": "2026-11-24T09:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T10:45:00+01:00",
+        "start": "2026-11-24T10:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T11:45:00+01:00",
+        "start": "2026-11-24T11:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T13:45:00+01:00",
+        "start": "2026-11-24T13:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T15:45:00+01:00",
+        "start": "2026-11-24T15:00:00+01:00"
+      },
+      {
+        "end": "2026-11-24T16:30:00+01:00",
+        "start": "2026-11-24T16:00:00+01:00"
+      }
+    ],
+    "taylor.kim@example.com": [
+      {
+        "end": "2026-11-24T15:30:00+01:00",
+        "start": "2026-11-24T14:30:00+01:00"
+      }
+    ]
+  },
+  "owner": {
+    "email": "riley.chen@example.com",
+    "name": "Riley Chen"
+  },
+  "timezone": "Europe/Amsterdam"
+}
