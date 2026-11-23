@@ -4,8 +4,13 @@ bench/models/gguf/
 # Python
 __pycache__/
 *.pyc
+evals/.venv/
+.pytest_cache/
+# Eval run reports
+reports/
 # Rust / Node
 target/
 node_modules/
 # OS
 .DS_Store
+*.log
