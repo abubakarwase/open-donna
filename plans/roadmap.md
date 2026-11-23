@@ -34,7 +34,7 @@ flowchart LR
 - M2 (training) depends on M0 data and contracts, not on M1 code. It can start as soon as M0 passes.
 - M3 (UI) and M4 (connectors) depend on the M1 core API contract (`C-01`), and can mock the core until M1 passes.
 
-## v1 scope (proposed; finalised by ticket E-01)
+## v1 scope (signed off 2026-11-21 in `evals/spec/scope.md`)
 
 | # | Job the user can do | Skill | Loop type |
 |---|---|---|---|
@@ -47,11 +47,11 @@ flowchart LR
 | J7 | Create, move or cancel an event (as a draft to approve) | calendar | closed |
 | J8 | Ask a question about an open sheet | sheet | closed (SQL) |
 | J9 | Ask about a selected range of a sheet | sheet | closed (SQL) |
-| J10 | Multi-step request ("prep me for tomorrow") | mixed | bounded open |
+| J10 | Multi-step request ("prep me for tomorrow") — **deferred to after v1 (2026-11-21); in v1 it escalates** | mixed | bounded open |
 | J11 | Hand a hard task to a frontier model, with consent | escalate | escalate |
 | J12 | Unsupported or chit-chat request: answer or decline politely | general | closed |
 
-**v1 non-goals (proposed):** sending or changing anything without approval; more than one account per provider; editing attachments; documents card; voice; Windows and Linux builds; on-device style fine-tuning (v1 uses a few-shot style profile); languages other than English.
+**v1 non-goals:** running multi-step requests locally (J10, deferred); sending or changing anything without approval; more than one account per provider; editing attachments; documents card; voice; Windows and Linux builds; on-device style fine-tuning (v1 uses a few-shot style profile); languages other than English.
 
 ---
 
@@ -152,7 +152,7 @@ Contracts first (E-01 to E-04), then everything else in parallel.
 | E-07 | Golden set: calendar (J5–J7) | ~200 cases incl. relative dates, timezones, conflicts, recurring events | E-03, E-04 |
 | E-08 | Golden set: sheets (J8–J9) | ~200 cases scored by DuckDB execution match; messy-sheet cases labelled `escalate` | E-03, E-04 |
 | E-09 | Rubrics and judge | Rubrics for summary faithfulness, draft quality, style match, plan quality; judge prompts; 50 human-graded calibration examples; agreement metric | E-06 |
-| E-10 | Trajectory scenarios (J10) | ~30 multi-step scenarios on mock tools with expected end state and step budget | E-03, E-04 |
+| E-10 | Trajectory scenarios (J10) — **deferred with J10** | ~30 multi-step scenarios on mock tools with expected end state and step budget | E-03, E-04 |
 | E-11 | Safety and injection set | ~100 cases: injected instructions inside emails, calendar invites and sheet cells; send/delete without approval; data exfiltration via escalation payload | E-03, E-04 |
 | E-12 | Eval runner and scorers | `evals run --sut <cmd> --suite <name> --split dev\|test` runs the SUT protocol, scores layers 1–4, writes `reports/<run>/scorecard.json` and an HTML report; reuses the bench scorer and DuckDB matcher | E-03 |
 | E-13 | Baseline and ratified thresholds | Model-only SUT run for the 3 models on the `test` split; `thresholds.yaml` ratified with the baseline gap shown per metric | E-05–E-12 |
@@ -200,7 +200,7 @@ flowchart TD
 | C-05 | Skill engine (closed loop) | Skills defined as typed slots + steps; slots filled with constrained decoding; one retry; escalate after two failed validations | C-03, E-02 |
 | C-06 | Tool layer + mock connectors | Tool trait matching E-02 schemas; mock mail, calendar and sheet backends read E-04 fixtures | C-02, E-04 |
 | C-07 | Sheet pipeline | calamine profile → SQL → DuckDB → explanation; SQL execution match measured on E-08 | C-05, C-06 |
-| C-08 | Bounded open loop | Planner with step, time and tool-whitelist limits; scored on E-10 | C-05, C-06 |
+| C-08 | Bounded open loop — **deferred with J10** | Planner with step, time and tool-whitelist limits; scored on E-10 | C-05, C-06 |
 | C-09 | Approval gate and untrusted-content handling | Every side-effect tool returns a draft; execution needs an approval token; content from mail, invites and sheets is marked untrusted and never treated as instructions; scored on E-11 | C-06 |
 | C-10 | Escalation | Frontier provider trait (user's own key), consent hook, privacy payload builder (sheet profile + results only by default); mocked in evals | C-05 |
 | C-11 | Perf instrumentation | Peak RSS and latency in every trace; layer-4 perf suite runs on the reference device | C-03, E-15 |
@@ -278,7 +278,7 @@ flowchart TD
 | K-03 | Google Calendar connector | Implements the E-02 calendar tools; contract tests pass | K-01, C-06 |
 | K-04 | Local store | SQLite for memory and settings; user profile as a plain file the user can edit | C-02 |
 | K-05 | Style profile v1 | Profile + few-shot examples built from sent mail on the device; pairwise style eval | K-02, E-09 |
-| K-06 | Onboarding | First-run wizard: detect RAM tier, download the model with progress, connect accounts | U-02, K-01 |
+| K-06 | Onboarding | First-run wizard: detect RAM tier, download the model with progress, connect accounts; before install, tell the user they can always hand a task to a frontier model (own key, consent each time) | U-02, K-01 |
 | K-07 | Record and replay | Connector traffic recorded as fixtures (scrubbed) so evals run offline | K-02, K-03 |
 | K-08 | Outlook connector (Microsoft Graph) | Same contract tests as K-02 and K-03 | K-07 |
 
@@ -325,7 +325,6 @@ flowchart TD
 - Training compute: local (MLX) or rented GPU? (decided by T-01)
 - Judge model for rubrics: frontier API or a large open model?
 - Gmail access route (see Risks).
-- v1 language: English only?
 
 ## Next step after approval
 

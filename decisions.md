@@ -115,6 +115,13 @@ flowchart TD
 - Proposed: Apache-2.0 licence; private golden `test` split, public `dev` split. Open: DCO vs CLA (depends on the business model).
 - Open-source checklist (later): LICENSE + NOTICE, README, CONTRIBUTING (evals gate PRs), CODE_OF_CONDUCT, SECURITY.md, THIRD_PARTY_LICENSES, issue/PR templates, `.gitignore` for models and user data, CI, roadmap tickets as GitHub Issues/Milestones, HF model cards. FunctionGemma uses the Gemma Terms of Use (not OSI); mention it or use the Qwen-only router fallback.
 
+## v1 scope (signed off 2026-11-21)
+
+- Source: `evals/spec/scope.md` (E-01). v1 jobs: J1–J9, J11, J12.
+- J10 (multi-step, bounded open loop) deferred to after v1 and kept in the roadmap; E-10 and C-08 deferred with it. In v1 a multi-step request escalates.
+- J11 stays: before install, the user is told they can always hand a task to a frontier model (own API key, consent each time).
+- English only for everything in v1.
+
 ## Next step
 
 - Roadmap approved 2026-11-20: `plans/roadmap.md` (M0 eval system → M5 alpha). Build later, starting with M0 tickets E-01 and E-02.
