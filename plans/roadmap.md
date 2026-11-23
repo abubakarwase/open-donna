@@ -195,7 +195,7 @@ flowchart TD
 |---|---|---|---|
 | C-01 | Core API contract | Rust trait and CLI surface for the core (`run(input, context) -> Trace`, streaming events) documented; the UI and connectors build against it | E-03 |
 | C-02 | Workspace skeleton | Cargo workspace: `core`, `inference`, `tools`, `skills`, `sut-cli`; builds and runs one empty case through the SUT protocol | C-01 |
-| C-03 | Inference crate | `llama-cpp-2` wrapper: load/unload, idle unload after 5 min, LoRA hot-swap, JSON-schema constrained output, RSS reporting | C-02 |
+| C-03 | Inference crate | `llama-server` (llama.cpp) child-process backend behind the `Inference` trait (decision 2026-11-21; `llama-cpp-2` can replace it later): load/unload, idle unload after 5 min, LoRA hot-swap, JSON-schema constrained output, RSS reporting | C-02 |
 | C-04 | Router | Label + confidence for every input; FunctionGemma path and base-model fallback behind one interface | C-03, E-05 |
 | C-05 | Skill engine (closed loop) | Skills defined as typed slots + steps; slots filled with constrained decoding; one retry; escalate after two failed validations | C-03, E-02 |
 | C-06 | Tool layer + mock connectors | Tool trait matching E-02 schemas; mock mail, calendar and sheet backends read E-04 fixtures | C-02, E-04 |

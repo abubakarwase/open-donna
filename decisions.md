@@ -122,6 +122,33 @@ flowchart TD
 - J11 stays: before install, the user is told they can always hand a task to a frontier model (own API key, consent each time).
 - English only for everything in v1.
 
+## M0 outcome (provisional Opus judgement, 2026-11-21 — confirm with the user)
+
+The user asked Opus to make the M0 judgement calls overnight. Each item below is provisional until the user confirms it.
+
+- M0 eval system built: scope (E-01), tool spec (E-02), case/trace schemas + SUT protocol (E-03), fixtures (E-04), golden sets router/email/calendar/sheet/safety = 900 cases (E-05..E-08, E-11), rubrics + judge + 50-row calibration set (E-09), runner + scorecard (E-12), model-only baseline (E-13), CI (E-14). E-10 deferred with J10. E-15 (8 GB device) and E-16 (real slice) need the user.
+- Baseline (model-only, test split, M1 Pro 16 GB): `evals/reports-baseline/BASELINE.md`. Route accuracy ≈ 0.77 for Qwen3.5-2B and 4B, 0.33 for untuned FunctionGemma; argument exact match 0.14 / 0.19; SQL execution match 0.33 / 0.53; escalation recall ≈ 0.12; safety holds except one injection followed by 4B.
+- Thresholds ratified (provisional) as v1 ship gates for the full agent, not for a bare model. Changes from the proposal:
+  - `latency_ms_wall_p95` 3000 → 6000 ms (p50 stays 3000; p95 equal to p50 was not a real tail budget).
+  - `triage_match` 1.0 → 0.85 (labels come from the model; 1.0 is not reachable for a judgement task). `slot_match` stays 1.0 because the slot comes from the deterministic `find_free_slot` tool.
+  - All other targets unchanged.
+- Default base model for M1: **Qwen3.5-2B**. 4B scored only slightly better (except SQL: 0.53 vs 0.33) and sits at the 3.5 GB RSS limit (llama-server 3.46 GB, 3.67 GB including the SUT process) and the latency budget (p50 3.7 s). Re-test 4B for the sheet skill once the agent feeds tool results, and after KV-cache quantisation / smaller context.
+- Router for M1: Qwen3.5-2B prompted router as the default (FunctionGemma untuned = 0.33). The fine-tuned FunctionGemma router stays the M2 plan.
+- Slot and triage scores in the baseline are low by design (model-only SUT gets no tool results); not a model signal.
+- Inference backend for M1: `llama-server` (llama.cpp) as a managed child process behind the `Inference` trait (same engine as the bench, JSON-schema output and LoRA hot-swap built in, killable for idle unload, measurable RSS). In-process `llama-cpp-2` can replace it later behind the same trait.
+- Open for the user: human review of 100 % of the test splits (~750 cases, all tagged `needs_human_review`), 50 judge calibration grades, confirm these thresholds, the 8 GB device (E-15), optional real slice (E-16).
+
+## M1 outcome (provisional Opus judgement, 2026-11-21 — confirm with the user)
+
+- Headless agent core built (C-01..C-07, C-09..C-11; C-08 deferred with J10): Cargo workspace `donna-core`, `donna-inference`, `donna-tools`, `donna-skills`, `donna-sut`; API in `docs/core-api.md`.
+- Result on the test split (stratified 60/suite, Qwen3.5-2B, M1 Pro 16 GB): `evals/reports-m1/M1.md`. All M1 gates pass on this machine: safety 100 %, schema-valid 1.0, peak RSS 2.2 GB, layer 1 ≥ the M0 model-only baseline. Quality thresholds are not met yet (M2's job).
+- Closed loop design kept and sharpened: the model fills simple typed slots (day, part of day, names, ids from a fixed list); code resolves dates, people and ids. This was the biggest quality gain.
+- Router confidence = the model's probability for the chosen label (token logprobs), never self-reported.
+- llama-server runs with `--cache-ram 512` (the 8 GiB default prompt cache grew RSS to 4.2 GB; 0 cost ~0.7 s p50).
+- Approval: tokens only from `donna-core`; the always-approve stub exists only in tests. Untrusted text reaches prompts only inside a random-boundary fence.
+- Escalation: default consent "ask each time"; payload never has raw rows by default; 16 KiB cap; evals use a mock provider.
+- Known gaps for M2: over-escalation (sheet), SQL execution match 0.43, triage 0.3, slot match, p50 latency 3.2 s (target 3.0 s), E-15 8 GB device not tested.
+
 ## Next step
 
 - Roadmap approved 2026-11-20: `plans/roadmap.md` (M0 eval system → M5 alpha). Build later, starting with M0 tickets E-01 and E-02.
