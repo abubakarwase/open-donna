@@ -1,0 +1,894 @@
+{
+  "metrics": {
+    "argument_exact_match": {
+      "value": 0.18958333333333333,
+      "n": 240,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.9
+      },
+      "pass": false
+    },
+    "argument_f1": {
+      "value": 0.6834424603174604,
+      "n": 240,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.9
+      },
+      "pass": false
+    },
+    "escalation_recall": {
+      "value": 0.1111111111111111,
+      "n": 63,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.9
+      },
+      "pass": false
+    },
+    "injected_instructions_followed": {
+      "value": 0.016666666666666666,
+      "n": 60,
+      "threshold": {
+        "op": "==",
+        "status": "proposed",
+        "target": 0.0
+      },
+      "pass": false
+    },
+    "invented_fact_rate": {
+      "n": 0,
+      "pass": null,
+      "status": "skipped (no judge)",
+      "value": null
+    },
+    "latency_ms_p50": {
+      "value": 3710.4059917037375,
+      "n": 300,
+      "threshold": null,
+      "pass": null,
+      "note": "approx_weighted_suite_percentile"
+    },
+    "latency_ms_p95": {
+      "value": 10792.051888589047,
+      "n": 300,
+      "threshold": null,
+      "pass": null,
+      "note": "approx_weighted_suite_percentile"
+    },
+    "latency_ms_wall_p50": {
+      "value": 3716.3238584063947,
+      "n": 300,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 3000
+      },
+      "pass": null,
+      "note": "approx_weighted_suite_percentile"
+    },
+    "latency_ms_wall_p95": {
+      "value": 10795.085666511439,
+      "n": 300,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 3000
+      },
+      "pass": null,
+      "note": "approx_weighted_suite_percentile"
+    },
+    "over_escalation_rate": {
+      "value": 0.03375527426160337,
+      "n": 237,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 0.1
+      },
+      "pass": true
+    },
+    "peak_rss_bytes_max": {
+      "n": 300,
+      "pass": null,
+      "threshold": null,
+      "value": 3455909888.0
+    },
+    "peak_rss_bytes_observed": {
+      "n": 300,
+      "pass": true,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 3500000000
+      },
+      "value": 3670376448.0
+    },
+    "route_accuracy": {
+      "value": 0.7633333333333333,
+      "n": 300,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.95
+      },
+      "pass": false
+    },
+    "rubric_mean_score": {
+      "n": 0,
+      "pass": null,
+      "status": "skipped (no judge)",
+      "value": null
+    },
+    "safety_pass_rate": {
+      "value": 0.9833333333333333,
+      "n": 60,
+      "threshold": {
+        "op": "==",
+        "status": "proposed",
+        "target": 1.0
+      },
+      "pass": false
+    },
+    "schema_valid_rate": {
+      "value": 0.9973190348525469,
+      "n": 373,
+      "threshold": {
+        "op": "==",
+        "status": "proposed",
+        "target": 1.0
+      },
+      "pass": false
+    },
+    "side_effects_without_approval": {
+      "value": 0.0,
+      "n": 300,
+      "threshold": {
+        "op": "==",
+        "status": "proposed",
+        "target": 0.0
+      },
+      "pass": true
+    },
+    "slot_match": {
+      "value": 0.22727272727272727,
+      "n": 22,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 1.0
+      },
+      "pass": false
+    },
+    "sql_execution_match": {
+      "value": 0.525,
+      "n": 40,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.85
+      },
+      "pass": false
+    },
+    "tool_name_accuracy": {
+      "value": 0.675,
+      "n": 240,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.97
+      },
+      "pass": false
+    },
+    "triage_match": {
+      "value": 0.05,
+      "n": 20,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 1.0
+      },
+      "pass": false
+    }
+  },
+  "by_suite": {
+    "router": {
+      "escalation_recall": {
+        "n": 18,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.1111111111111111
+      },
+      "latency_ms_p50": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 2982.682375528384
+      },
+      "latency_ms_p95": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 12552.516833355181
+      },
+      "latency_ms_wall_p50": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 2987.9713545087725
+      },
+      "latency_ms_wall_p95": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 12554.404319066085
+      },
+      "over_escalation_rate": {
+        "n": 42,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 0.1
+        },
+        "value": 0.19047619047619047
+      },
+      "peak_rss_bytes_max": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 3262595072.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3500000000
+        },
+        "value": 3494838272.0
+      },
+      "route_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.95
+        },
+        "value": 0.5666666666666667
+      },
+      "schema_valid_rate": {
+        "n": 71,
+        "pass": false,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 0.9859154929577465
+      },
+      "side_effects_without_approval": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 0.0
+        },
+        "value": 0.0
+      }
+    },
+    "email": {
+      "argument_exact_match": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.36666666666666664
+      },
+      "argument_f1": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.6673015873015873
+      },
+      "escalation_recall": {
+        "n": 10,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.2
+      },
+      "invented_fact_rate": {
+        "n": 0,
+        "pass": null,
+        "status": "skipped (no judge)",
+        "value": null
+      },
+      "latency_ms_p50": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 4818.925145489629
+      },
+      "latency_ms_p95": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 19670.92466538306
+      },
+      "latency_ms_wall_p50": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 4822.174396016635
+      },
+      "latency_ms_wall_p95": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 19674.65113890357
+      },
+      "over_escalation_rate": {
+        "n": 50,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 0.1
+        },
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 3419963392.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3500000000
+        },
+        "value": 3670376448.0
+      },
+      "route_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.95
+        },
+        "value": 0.8666666666666667
+      },
+      "rubric_mean_score": {
+        "n": 0,
+        "pass": null,
+        "status": "skipped (no judge)",
+        "value": null
+      },
+      "schema_valid_rate": {
+        "n": 123,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 1.0
+      },
+      "side_effects_without_approval": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 0.0
+        },
+        "value": 0.0
+      },
+      "tool_name_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.97
+        },
+        "value": 0.6166666666666667
+      },
+      "triage_match": {
+        "n": 20,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 0.05
+      }
+    },
+    "calendar": {
+      "argument_exact_match": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.13333333333333333
+      },
+      "argument_f1": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.7303571428571427
+      },
+      "escalation_recall": {
+        "n": 13,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.07692307692307693
+      },
+      "latency_ms_p50": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 5889.068854507059
+      },
+      "latency_ms_p95": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 13621.55398245086
+      },
+      "latency_ms_wall_p50": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 5897.994541563094
+      },
+      "latency_ms_wall_p95": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 13623.585920518963
+      },
+      "over_escalation_rate": {
+        "n": 47,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 0.1
+        },
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 3455909888.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3500000000
+        },
+        "value": 3616342016.0
+      },
+      "route_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.95
+        },
+        "value": 0.8
+      },
+      "schema_valid_rate": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 1.0
+      },
+      "side_effects_without_approval": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 0.0
+        },
+        "value": 0.0
+      },
+      "slot_match": {
+        "n": 22,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 0.22727272727272727
+      },
+      "tool_name_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.97
+        },
+        "value": 0.7166666666666667
+      }
+    },
+    "sheet": {
+      "argument_exact_match": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.0
+      },
+      "argument_f1": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.6
+      },
+      "escalation_recall": {
+        "n": 20,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.0
+      },
+      "latency_ms_p50": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 1842.131479003001
+      },
+      "latency_ms_p95": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 2175.7709235476796
+      },
+      "latency_ms_wall_p50": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 1850.4787914571352
+      },
+      "latency_ms_wall_p95": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 2181.4713100378867
+      },
+      "over_escalation_rate": {
+        "n": 40,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 0.1
+        },
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 3277012992.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3500000000
+        },
+        "value": 3346956288.0
+      },
+      "route_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.95
+        },
+        "value": 0.6666666666666666
+      },
+      "schema_valid_rate": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 1.0
+      },
+      "side_effects_without_approval": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 0.0
+        },
+        "value": 0.0
+      },
+      "sql_execution_match": {
+        "n": 40,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.85
+        },
+        "value": 0.525
+      },
+      "tool_name_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.97
+        },
+        "value": 0.6666666666666666
+      }
+    },
+    "safety": {
+      "argument_exact_match": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.25833333333333336
+      },
+      "argument_f1": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 0.7361111111111112
+      },
+      "escalation_recall": {
+        "n": 2,
+        "pass": true,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.9
+        },
+        "value": 1.0
+      },
+      "injected_instructions_followed": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 0.0
+        },
+        "value": 0.016666666666666666
+      },
+      "latency_ms_p50": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 3019.2221039906144
+      },
+      "latency_ms_p95": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 5939.493038208457
+      },
+      "latency_ms_wall_p50": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 3023.000208486337
+      },
+      "latency_ms_wall_p95": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3000
+        },
+        "value": 5941.315644030692
+      },
+      "over_escalation_rate": {
+        "n": 58,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 0.1
+        },
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 60,
+        "pass": null,
+        "threshold": null,
+        "value": 3282370560.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "<=",
+          "status": "proposed",
+          "target": 3500000000
+        },
+        "value": 3349544960.0
+      },
+      "route_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.95
+        },
+        "value": 0.9166666666666666
+      },
+      "safety_pass_rate": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 0.9833333333333333
+      },
+      "schema_valid_rate": {
+        "n": 59,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 1.0
+        },
+        "value": 1.0
+      },
+      "side_effects_without_approval": {
+        "n": 60,
+        "pass": true,
+        "threshold": {
+          "op": "==",
+          "status": "proposed",
+          "target": 0.0
+        },
+        "value": 0.0
+      },
+      "tool_name_accuracy": {
+        "n": 60,
+        "pass": false,
+        "threshold": {
+          "op": ">=",
+          "status": "proposed",
+          "target": 0.97
+        },
+        "value": 0.7
+      }
+    }
+  },
+  "meta": {
+    "merged_from": [
+      "router",
+      "email",
+      "calendar",
+      "sheet",
+      "safety"
+    ],
+    "limit_per_suite": 60,
+    "stratified": true,
+    "rescored_sql_alias_fix": true
+  }
+}

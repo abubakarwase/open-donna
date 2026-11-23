@@ -1,0 +1,684 @@
+{
+  "by_job": {
+    "J1": {
+      "latency_ms_p50": {
+        "n": 9,
+        "value": 352.4458330357447
+      },
+      "latency_ms_p95": {
+        "n": 9,
+        "value": 495.0627750484273
+      },
+      "latency_ms_wall_p50": {
+        "n": 9,
+        "pass": true,
+        "value": 353.48525003064424
+      },
+      "latency_ms_wall_p95": {
+        "n": 9,
+        "pass": true,
+        "value": 1143.2239914080124
+      },
+      "over_escalation_rate": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 9,
+        "value": 690651136.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 9,
+        "pass": true,
+        "value": 749469696.0
+      },
+      "route_accuracy": {
+        "n": 9,
+        "pass": false,
+        "value": 0.6666666666666666
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J11": {
+      "escalation_recall": {
+        "n": 36,
+        "pass": false,
+        "value": 0.027777777777777776
+      },
+      "latency_ms_p50": {
+        "n": 36,
+        "value": 344.09416699782014
+      },
+      "latency_ms_p95": {
+        "n": 36,
+        "value": 557.7181039843708
+      },
+      "latency_ms_wall_p50": {
+        "n": 36,
+        "pass": true,
+        "value": 346.1501454585232
+      },
+      "latency_ms_wall_p95": {
+        "n": 36,
+        "pass": true,
+        "value": 559.823208313901
+      },
+      "peak_rss_bytes_max": {
+        "n": 36,
+        "value": 2566520832.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 36,
+        "pass": true,
+        "value": 1172733952.0
+      },
+      "route_accuracy": {
+        "n": 36,
+        "pass": false,
+        "value": 0.027777777777777776
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 36,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J12": {
+      "latency_ms_p50": {
+        "n": 21,
+        "value": 249.82204101979733
+      },
+      "latency_ms_p95": {
+        "n": 21,
+        "value": 312.74674995802343
+      },
+      "latency_ms_wall_p50": {
+        "n": 21,
+        "pass": true,
+        "value": 250.22195791825652
+      },
+      "latency_ms_wall_p95": {
+        "n": 21,
+        "pass": true,
+        "value": 313.12208401504904
+      },
+      "over_escalation_rate": {
+        "n": 21,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 21,
+        "value": 2566520832.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 21,
+        "pass": true,
+        "value": 1321582592.0
+      },
+      "route_accuracy": {
+        "n": 21,
+        "pass": false,
+        "value": 0.7619047619047619
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 21,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J2": {
+      "latency_ms_p50": {
+        "n": 3,
+        "value": 815.1500419480726
+      },
+      "latency_ms_p95": {
+        "n": 3,
+        "value": 14991.878791665657
+      },
+      "latency_ms_wall_p50": {
+        "n": 3,
+        "pass": true,
+        "value": 816.4099170826375
+      },
+      "latency_ms_wall_p95": {
+        "n": 3,
+        "pass": false,
+        "value": 14993.083503923843
+      },
+      "over_escalation_rate": {
+        "n": 3,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 3,
+        "value": 781320192.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 3,
+        "pass": true,
+        "value": 839991296.0
+      },
+      "route_accuracy": {
+        "n": 3,
+        "pass": false,
+        "value": 0.3333333333333333
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 3,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J3": {
+      "latency_ms_p50": {
+        "n": 12,
+        "value": 356.92289599683136
+      },
+      "latency_ms_p95": {
+        "n": 12,
+        "value": 416.46768111968413
+      },
+      "latency_ms_wall_p50": {
+        "n": 12,
+        "pass": true,
+        "value": 361.9213755009696
+      },
+      "latency_ms_wall_p95": {
+        "n": 12,
+        "pass": true,
+        "value": 422.9122730437666
+      },
+      "over_escalation_rate": {
+        "n": 12,
+        "pass": false,
+        "value": 0.16666666666666666
+      },
+      "peak_rss_bytes_max": {
+        "n": 12,
+        "value": 1152172032.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 12,
+        "pass": true,
+        "value": 1210859520.0
+      },
+      "route_accuracy": {
+        "n": 12,
+        "pass": false,
+        "value": 0.6666666666666666
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 12,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J4": {
+      "latency_ms_p50": {
+        "n": 9,
+        "value": 361.17329203989357
+      },
+      "latency_ms_p95": {
+        "n": 9,
+        "value": 375.3218172583729
+      },
+      "latency_ms_wall_p50": {
+        "n": 9,
+        "pass": true,
+        "value": 362.27670800872147
+      },
+      "latency_ms_wall_p95": {
+        "n": 9,
+        "pass": true,
+        "value": 376.4572750078514
+      },
+      "over_escalation_rate": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 9,
+        "value": 1422802944.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 9,
+        "pass": true,
+        "value": 1481490432.0
+      },
+      "route_accuracy": {
+        "n": 9,
+        "pass": true,
+        "value": 1.0
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J5": {
+      "latency_ms_p50": {
+        "n": 9,
+        "value": 377.0121249835938
+      },
+      "latency_ms_p95": {
+        "n": 9,
+        "value": 398.52014218922704
+      },
+      "latency_ms_wall_p50": {
+        "n": 9,
+        "pass": true,
+        "value": 377.91154196020216
+      },
+      "latency_ms_wall_p95": {
+        "n": 9,
+        "pass": true,
+        "value": 401.20411654934287
+      },
+      "over_escalation_rate": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 9,
+        "value": 1708883968.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 9,
+        "pass": true,
+        "value": 1767571456.0
+      },
+      "route_accuracy": {
+        "n": 9,
+        "pass": false,
+        "value": 0.1111111111111111
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J6": {
+      "latency_ms_p50": {
+        "n": 9,
+        "value": 371.22254201676697
+      },
+      "latency_ms_p95": {
+        "n": 9,
+        "value": 433.03530004341155
+      },
+      "latency_ms_wall_p50": {
+        "n": 9,
+        "pass": true,
+        "value": 372.1275000134483
+      },
+      "latency_ms_wall_p95": {
+        "n": 9,
+        "pass": true,
+        "value": 433.92257469240576
+      },
+      "over_escalation_rate": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 9,
+        "value": 1995735040.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 9,
+        "pass": true,
+        "value": 2054422528.0
+      },
+      "route_accuracy": {
+        "n": 9,
+        "pass": false,
+        "value": 0.1111111111111111
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 9,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J7": {
+      "latency_ms_p50": {
+        "n": 15,
+        "value": 367.04175011254847
+      },
+      "latency_ms_p95": {
+        "n": 15,
+        "value": 412.65984574565664
+      },
+      "latency_ms_wall_p50": {
+        "n": 15,
+        "pass": true,
+        "value": 367.9950829828158
+      },
+      "latency_ms_wall_p95": {
+        "n": 15,
+        "pass": true,
+        "value": 413.53423331165686
+      },
+      "over_escalation_rate": {
+        "n": 15,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 15,
+        "value": 2471444480.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 15,
+        "pass": true,
+        "value": 2530131968.0
+      },
+      "route_accuracy": {
+        "n": 15,
+        "pass": false,
+        "value": 0.26666666666666666
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 15,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J8": {
+      "latency_ms_p50": {
+        "n": 12,
+        "value": 228.94766699755564
+      },
+      "latency_ms_p95": {
+        "n": 12,
+        "value": 296.5753373631742
+      },
+      "latency_ms_wall_p50": {
+        "n": 12,
+        "pass": true,
+        "value": 239.88231248222291
+      },
+      "latency_ms_wall_p95": {
+        "n": 12,
+        "pass": true,
+        "value": 311.2606248469092
+      },
+      "over_escalation_rate": {
+        "n": 12,
+        "pass": true,
+        "value": 0.0
+      },
+      "peak_rss_bytes_max": {
+        "n": 12,
+        "value": 2566520832.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 12,
+        "pass": true,
+        "value": 2634825728.0
+      },
+      "route_accuracy": {
+        "n": 12,
+        "pass": false,
+        "value": 0.08333333333333333
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 12,
+        "pass": true,
+        "value": 0.0
+      }
+    },
+    "J9": {
+      "latency_ms_p50": {
+        "n": 15,
+        "value": 273.73937505763024
+      },
+      "latency_ms_p95": {
+        "n": 15,
+        "value": 6346.633962541798
+      },
+      "latency_ms_wall_p50": {
+        "n": 15,
+        "pass": true,
+        "value": 283.3586659980938
+      },
+      "latency_ms_wall_p95": {
+        "n": 15,
+        "pass": false,
+        "value": 6353.36471669141
+      },
+      "over_escalation_rate": {
+        "n": 15,
+        "pass": true,
+        "value": 0.06666666666666667
+      },
+      "peak_rss_bytes_max": {
+        "n": 15,
+        "value": 2566520832.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 15,
+        "pass": true,
+        "value": 2367143936.0
+      },
+      "route_accuracy": {
+        "n": 15,
+        "pass": false,
+        "value": 0.06666666666666667
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 15,
+        "pass": true,
+        "value": 0.0
+      }
+    }
+  },
+  "by_suite": {
+    "router": {
+      "escalation_recall": {
+        "n": 36,
+        "pass": false,
+        "value": 0.027777777777777776
+      },
+      "latency_ms_p50": {
+        "n": 150,
+        "value": 344.80708348564804
+      },
+      "latency_ms_p95": {
+        "n": 150,
+        "value": 511.18108752416435
+      },
+      "latency_ms_wall_p50": {
+        "n": 150,
+        "pass": true,
+        "value": 346.5240625082515
+      },
+      "latency_ms_wall_p95": {
+        "n": 150,
+        "pass": true,
+        "value": 538.3585377247066
+      },
+      "over_escalation_rate": {
+        "n": 114,
+        "pass": true,
+        "value": 0.02631578947368421
+      },
+      "peak_rss_bytes_max": {
+        "n": 150,
+        "value": 2566520832.0
+      },
+      "peak_rss_bytes_observed": {
+        "n": 150,
+        "pass": true,
+        "value": 2634825728.0
+      },
+      "route_accuracy": {
+        "n": 150,
+        "pass": false,
+        "value": 0.32666666666666666
+      },
+      "schema_valid_rate": {
+        "n": 0,
+        "value": null
+      },
+      "side_effects_without_approval": {
+        "n": 150,
+        "pass": true,
+        "value": 0.0
+      }
+    }
+  },
+  "metrics": {
+    "escalation_recall": {
+      "n": 36,
+      "pass": false,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.9
+      },
+      "value": 0.027777777777777776
+    },
+    "latency_ms_p50": {
+      "n": 150,
+      "pass": null,
+      "threshold": null,
+      "value": 344.80708348564804
+    },
+    "latency_ms_p95": {
+      "n": 150,
+      "pass": null,
+      "threshold": null,
+      "value": 511.18108752416435
+    },
+    "latency_ms_wall_p50": {
+      "n": 150,
+      "pass": true,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 3000
+      },
+      "value": 346.5240625082515
+    },
+    "latency_ms_wall_p95": {
+      "n": 150,
+      "pass": true,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 3000
+      },
+      "value": 538.3585377247066
+    },
+    "over_escalation_rate": {
+      "n": 114,
+      "pass": true,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 0.1
+      },
+      "value": 0.02631578947368421
+    },
+    "peak_rss_bytes_max": {
+      "n": 150,
+      "pass": null,
+      "threshold": null,
+      "value": 2566520832.0
+    },
+    "peak_rss_bytes_observed": {
+      "n": 150,
+      "pass": true,
+      "threshold": {
+        "op": "<=",
+        "status": "proposed",
+        "target": 3500000000
+      },
+      "value": 2634825728.0
+    },
+    "route_accuracy": {
+      "n": 150,
+      "pass": false,
+      "threshold": {
+        "op": ">=",
+        "status": "proposed",
+        "target": 0.95
+      },
+      "value": 0.32666666666666666
+    },
+    "schema_valid_rate": {
+      "n": 0,
+      "pass": null,
+      "threshold": null,
+      "value": null
+    },
+    "side_effects_without_approval": {
+      "n": 150,
+      "pass": true,
+      "threshold": {
+        "op": "==",
+        "status": "proposed",
+        "target": 0.0
+      },
+      "value": 0.0
+    }
+  },
+  "n_cases": 150
+}
