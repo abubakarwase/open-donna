@@ -1,0 +1,55 @@
+name: evals
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      split:
+        description: Eval split to run after check
+        type: choice
+        options:
+          - dev
+          - test
+        default: dev
+
+jobs:
+  evals:
+    if: github.event_name != 'workflow_dispatch'
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: check
+        run: bash evals/ci.sh check
+      - name: dev (oracle)
+        run: bash evals/ci.sh dev
+
+  evals-dispatch:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: check
+        run: bash evals/ci.sh check
+      - name: split=dev
+        if: inputs.split == 'dev'
+        run: bash evals/ci.sh dev
+      - name: split=test
+        if: inputs.split == 'test'
+        env:
+          DONNA_ALLOW_TEST_SPLIT: "1"
+        run: bash evals/ci.sh test --sut "uv run python suts/oracle.py"
