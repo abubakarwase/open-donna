@@ -1,0 +1,26 @@
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+license = "MIT"
+
+[workspace.dependencies]
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+thiserror = "2.0.12"
+anyhow = "1.0.97"
+chrono = { version = "0.4.40", features = ["serde"] }
+chrono-tz = "0.10.3"
+jsonschema = "0.28.3"
+libc = "0.2.171"
+ureq = { version = "2.12.1", features = ["json"] }
+calamine = { version = "0.38", features = ["dates"] }
+duckdb = { version = "1.2.2", features = ["bundled"] }
+donna-core = { path = "crates/donna-core" }
+donna-inference = { path = "crates/donna-inference" }
+donna-skills = { path = "crates/donna-skills" }
+donna-tools = { path = "crates/donna-tools" }
+rand = "0.9.0"

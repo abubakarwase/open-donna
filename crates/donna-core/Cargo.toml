@@ -1,0 +1,15 @@
+[package]
+name = "donna-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[features]
+default = []
+# Enables AlwaysApprover for integration tests only. Not for production deps.
+test-approver = []
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

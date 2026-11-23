@@ -1,0 +1,18 @@
+[package]
+name = "donna-sut"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "donna-sut"
+path = "src/main.rs"
+
+[dependencies]
+donna-core = { workspace = true }
+donna-inference = { workspace = true }
+donna-skills = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+libc = { workspace = true }

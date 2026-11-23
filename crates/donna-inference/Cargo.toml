@@ -1,0 +1,13 @@
+[package]
+name = "donna-inference"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+donna-core = { workspace = true }
+libc = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+ureq = { workspace = true }

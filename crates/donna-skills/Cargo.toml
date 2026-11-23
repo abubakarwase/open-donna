@@ -1,0 +1,19 @@
+[package]
+name = "donna-skills"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+donna-core = { workspace = true }
+donna-inference = { workspace = true }
+donna-tools = { workspace = true }
+chrono = { workspace = true }
+chrono-tz = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+rand = { workspace = true }
+
+[dev-dependencies]
+donna-core = { workspace = true, features = ["test-approver"] }
