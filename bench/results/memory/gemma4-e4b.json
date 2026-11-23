@@ -1,0 +1,23 @@
+{
+  "id": "gemma4-e4b",
+  "gguf_bytes": 4977171584,
+  "peak_rss_kb": 3946544,
+  "peak_rss_bytes": 4041261056,
+  "fits_3_5gb": false,
+  "load_time_s_runs": [
+    6.019152879714966,
+    4.7982587814331055,
+    3.7439522743225098
+  ],
+  "load_time_s_median": 4.7982587814331055,
+  "load_time_s_final": 3.3503100872039795,
+  "llama_server_flags": [
+    "--jinja",
+    "-c",
+    "4096",
+    "--reasoning-budget",
+    "0",
+    "-np",
+    "1"
+  ]
+}

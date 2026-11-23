@@ -1,0 +1,20 @@
+
+> tauri-shadcn@0.1.0 tauri /Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/tauri-shadcn
+> tauri build --bundles app
+
+        Info Looking up installed tauri packages to check mismatched versions...
+     Running beforeBuildCommand `pnpm build`
+
+> tauri-shadcn@0.1.0 build /Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/tauri-shadcn
+> tsc && vite build
+
+src/App.tsx(4,3): error TS2724: '"@tanstack/react-table"' has no exported member named 'useReactTable'. Did you mean 'ReactTable'?
+src/App.tsx(5,3): error TS2724: '"@tanstack/react-table"' has no exported member named 'getCoreRowModel'. Did you mean 'createCoreRowModel'?
+src/App.tsx(50,27): error TS2707: Generic type 'ColumnDef' requires between 2 and 3 type arguments.
+src/App.tsx(155,45): error TS7006: Parameter 'hg' implicitly has an 'any' type.
+src/App.tsx(157,36): error TS7006: Parameter 'h' implicitly has an 'any' type.
+src/App.tsx(181,49): error TS7006: Parameter 'cell' implicitly has an 'any' type.
+ ELIFECYCLE  Command failed with exit code 2.
+beforeBuildCommand `pnpm build` failed with exit code 2
+       Error beforeBuildCommand `pnpm build` failed with exit code 2
+ ELIFECYCLE  Command failed with exit code 1.

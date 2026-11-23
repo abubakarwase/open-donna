@@ -1,0 +1,13 @@
+region,product,units,revenue,month,rep
+North,Widget,120,2400,2024-01,Ada
+South,Gadget,80,3200,2024-01,Bob
+East,Widget,95,1900,2024-01,Cara
+West,Gadget,60,2400,2024-01,Dan
+North,Gadget,70,2800,2024-02,Ada
+South,Widget,110,2200,2024-02,Bob
+East,Gadget,50,2000,2024-02,Cara
+West,Widget,90,1800,2024-02,Dan
+North,Widget,130,2600,2024-03,Ada
+South,Gadget,85,3400,2024-03,Bob
+East,Widget,100,2000,2024-03,Cara
+West,Gadget,55,2200,2024-03,Dan

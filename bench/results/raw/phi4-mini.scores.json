@@ -1,0 +1,473 @@
+{
+  "role": "base",
+  "n_cases": 40,
+  "router_accuracy": 0.6666666666666666,
+  "tool_name_accuracy": 0.0,
+  "tool_arg_exact_match": 0.0,
+  "schema_valid_json_rate": 0.0,
+  "sql_execution_match_rate": 0.8,
+  "mean_latency_ms": 1896.9394364830805,
+  "cases": [
+    {
+      "id": "r01",
+      "type": "router",
+      "latency_ms": 389.77262505795807,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "email",
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r02",
+      "type": "router",
+      "latency_ms": 200.33795898780227,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r03",
+      "type": "router",
+      "latency_ms": 83.61375005915761,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "sheet",
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r04",
+      "type": "router",
+      "latency_ms": 83.71491706930101,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r05",
+      "type": "router",
+      "latency_ms": 136.40754099469632,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "escalate",
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "r06",
+      "type": "router",
+      "latency_ms": 84.30912508629262,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "email",
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r07",
+      "type": "router",
+      "latency_ms": 85.78808302991092,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r08",
+      "type": "router",
+      "latency_ms": 85.61545901466161,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": "general",
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r09",
+      "type": "router",
+      "latency_ms": 81.77387504838407,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r10",
+      "type": "router",
+      "latency_ms": 126.95570895448327,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "escalate",
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "r11",
+      "type": "router",
+      "latency_ms": 82.16445799916983,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "email",
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r12",
+      "type": "router",
+      "latency_ms": 87.94204192236066,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r13",
+      "type": "router",
+      "latency_ms": 84.7994169453159,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "sheet",
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r14",
+      "type": "router",
+      "latency_ms": 83.89662497211248,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": "sheet",
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r15",
+      "type": "router",
+      "latency_ms": 85.51775000523776,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": "general",
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "t01",
+      "type": "tool",
+      "latency_ms": 3787.5620420090854,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t02",
+      "type": "tool",
+      "latency_ms": 888.4266660315916,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t03",
+      "type": "tool",
+      "latency_ms": 9629.109041998163,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t04",
+      "type": "tool",
+      "latency_ms": 2244.1442910348997,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t05",
+      "type": "tool",
+      "latency_ms": 1696.665000054054,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t06",
+      "type": "tool",
+      "latency_ms": 3189.481250010431,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t07",
+      "type": "tool",
+      "latency_ms": 10561.694790958427,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t08",
+      "type": "tool",
+      "latency_ms": 2288.244500057772,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t09",
+      "type": "tool",
+      "latency_ms": 1237.7255409955978,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t10",
+      "type": "tool",
+      "latency_ms": 2162.3192919651046,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t11",
+      "type": "tool",
+      "latency_ms": 8075.616167043336,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t12",
+      "type": "tool",
+      "latency_ms": 3406.678416999057,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t13",
+      "type": "tool",
+      "latency_ms": 4775.611125049181,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t14",
+      "type": "tool",
+      "latency_ms": 8623.362625017762,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t15",
+      "type": "tool",
+      "latency_ms": 4990.690583013929,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "s01",
+      "type": "sheet",
+      "latency_ms": 930.9937919024378,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT SUM(revenue) AS total_revenue FROM sales"
+      }
+    },
+    {
+      "id": "s02",
+      "type": "sheet",
+      "latency_ms": 628.5340839531273,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT SUM(units) AS total_units_sold\nFROM sales\nWHERE region = 'North'"
+      }
+    },
+    {
+      "id": "s03",
+      "type": "sheet",
+      "latency_ms": 809.5094999298453,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT AVG(revenue) AS average_revenue\nFROM sales\nWHERE product = 'Gadget'"
+      }
+    },
+    {
+      "id": "s04",
+      "type": "sheet",
+      "latency_ms": 606.0894170077518,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT COUNT(*) AS row_count\nFROM sales\nWHERE product = 'Widget'"
+      }
+    },
+    {
+      "id": "s05",
+      "type": "sheet",
+      "latency_ms": 587.198790977709,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT region, SUM(revenue) AS total_revenue\nFROM sales\nGROUP BY region"
+      }
+    },
+    {
+      "id": "s06",
+      "type": "sheet",
+      "latency_ms": 835.1642910856754,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT rep, SUM(revenue) AS total_revenue\nFROM sales\nGROUP BY rep\nORDER BY total_revenue DESC\nLIMIT 1"
+      }
+    },
+    {
+      "id": "s07",
+      "type": "sheet",
+      "latency_ms": 704.3648749822751,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT SUM(units) AS total_units\nFROM sales\nWHERE month = '2024-02'"
+      }
+    },
+    {
+      "id": "s08",
+      "type": "sheet",
+      "latency_ms": 371.7176669742912,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT DISTINCT product FROM sales"
+      }
+    },
+    {
+      "id": "s09",
+      "type": "sheet",
+      "latency_ms": 416.85800009872764,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT MAX(units) AS MaxUnits\nFROM sales"
+      }
+    },
+    {
+      "id": "s10",
+      "type": "sheet",
+      "latency_ms": 647.2063750261441,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT revenue\nFROM sales\nWHERE region = 'East' AND product = 'Widget'"
+      }
+    }
+  ],
+  "model_id": "phi4-mini"
+}

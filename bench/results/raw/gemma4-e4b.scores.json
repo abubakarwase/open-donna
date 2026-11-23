@@ -1,0 +1,525 @@
+{
+  "role": "base",
+  "n_cases": 40,
+  "router_accuracy": 0.8666666666666667,
+  "tool_name_accuracy": 0.9333333333333333,
+  "tool_arg_exact_match": 0.6666666666666666,
+  "schema_valid_json_rate": 0.9333333333333333,
+  "sql_execution_match_rate": 0.7,
+  "mean_latency_ms": 2491.831744744559,
+  "cases": [
+    {
+      "id": "r01",
+      "type": "router",
+      "latency_ms": 688.6092920321971,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "email",
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r02",
+      "type": "router",
+      "latency_ms": 157.66291692852974,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r03",
+      "type": "router",
+      "latency_ms": 143.87566701043397,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "sheet",
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r04",
+      "type": "router",
+      "latency_ms": 143.6870830366388,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "general",
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r05",
+      "type": "router",
+      "latency_ms": 195.9937079809606,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "escalate",
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "r06",
+      "type": "router",
+      "latency_ms": 139.15616692975163,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "email",
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r07",
+      "type": "router",
+      "latency_ms": 170.2923330012709,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r08",
+      "type": "router",
+      "latency_ms": 147.38024992402643,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "sheet",
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r09",
+      "type": "router",
+      "latency_ms": 157.5880409218371,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "general",
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r10",
+      "type": "router",
+      "latency_ms": 147.1398330759257,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": "general",
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "r11",
+      "type": "router",
+      "latency_ms": 143.58220796566457,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "email",
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r12",
+      "type": "router",
+      "latency_ms": 158.79366698209196,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r13",
+      "type": "router",
+      "latency_ms": 148.64433405455202,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "sheet",
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r14",
+      "type": "router",
+      "latency_ms": 140.85916592739522,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "general",
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r15",
+      "type": "router",
+      "latency_ms": 146.8306250171736,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": "sheet",
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "t01",
+      "type": "tool",
+      "latency_ms": 10462.366583989933,
+      "ok": false,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": false,
+        "pred_name": "draft_email",
+        "pred_args": {
+          "body": "Hi Jane,\n\nPlease find the updated Q1 roadmap attached/below. I'd like to review it with you and get your feedback on the priorities and timelines.\n\nLet me know when you are available to discuss.\n\nBest regards,\n[Your Name]",
+          "subject": "Roadmap update",
+          "to": "jane@example.com"
+        }
+      }
+    },
+    {
+      "id": "t02",
+      "type": "tool",
+      "latency_ms": 8107.542999903671,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "create_event",
+        "pred_args": {
+          "end": "2024-06-10T15:00:00",
+          "start": "2024-06-10T14:00:00",
+          "title": "Design review"
+        }
+      }
+    },
+    {
+      "id": "t03",
+      "type": "tool",
+      "latency_ms": 6362.817917019129,
+      "ok": false,
+      "schema_valid": false,
+      "detail": {
+        "name_ok": false,
+        "arg_ok": false,
+        "pred_name": null,
+        "pred_args": null
+      }
+    },
+    {
+      "id": "t04",
+      "type": "tool",
+      "latency_ms": 3966.6600410128012,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "search_email",
+        "pred_args": {
+          "from": "bob@acme.com",
+          "query": "invoices"
+        }
+      }
+    },
+    {
+      "id": "t05",
+      "type": "tool",
+      "latency_ms": 4414.831917034462,
+      "ok": false,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": false,
+        "pred_name": "draft_email",
+        "pred_args": {
+          "body": "See today's notes.",
+          "subject": "Standup notes",
+          "to": "team@corp.com"
+        }
+      }
+    },
+    {
+      "id": "t06",
+      "type": "tool",
+      "latency_ms": 7160.770624992438,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "create_event",
+        "pred_args": {
+          "end": "2024-07-01T09:30:00",
+          "start": "2024-07-01T09:00:00",
+          "title": "Budget sync"
+        }
+      }
+    },
+    {
+      "id": "t07",
+      "type": "tool",
+      "latency_ms": 5386.179291992448,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "find_free_slot",
+        "pred_args": {
+          "duration_minutes": 60,
+          "from": "2024-07-08",
+          "to": "2024-07-10"
+        }
+      }
+    },
+    {
+      "id": "t08",
+      "type": "tool",
+      "latency_ms": 3343.3572079520673,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "search_email",
+        "pred_args": {
+          "from": "alice@example.org",
+          "query": "contract"
+        }
+      }
+    },
+    {
+      "id": "t09",
+      "type": "tool",
+      "latency_ms": 4994.416374946013,
+      "ok": false,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": false,
+        "pred_name": "draft_email",
+        "pred_args": {
+          "body": "Attached is the offer.",
+          "subject": "Offer letter",
+          "to": "hr@company.com"
+        }
+      }
+    },
+    {
+      "id": "t10",
+      "type": "tool",
+      "latency_ms": 6884.025332983583,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "create_event",
+        "pred_args": {
+          "end": "2024-08-05T11:30:00",
+          "start": "2024-08-05T10:00:00",
+          "title": "Sprint planning"
+        }
+      }
+    },
+    {
+      "id": "t11",
+      "type": "tool",
+      "latency_ms": 5409.06429104507,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "find_free_slot",
+        "pred_args": {
+          "duration_minutes": 30,
+          "from": "2024-08-12",
+          "to": "2024-08-14"
+        }
+      }
+    },
+    {
+      "id": "t12",
+      "type": "tool",
+      "latency_ms": 3149.2503749905154,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "search_email",
+        "pred_args": {
+          "from": "vendor@supplier.com",
+          "query": "shipping"
+        }
+      }
+    },
+    {
+      "id": "t13",
+      "type": "tool",
+      "latency_ms": 6456.187166972086,
+      "ok": false,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": false,
+        "pred_name": "draft_email",
+        "pred_args": {
+          "body": "Progress is on track.",
+          "subject": "Weekly update",
+          "to": "boss@work.com"
+        }
+      }
+    },
+    {
+      "id": "t14",
+      "type": "tool",
+      "latency_ms": 6924.621084006503,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "create_event",
+        "pred_args": {
+          "end": "2024-09-02T14:00:00",
+          "start": "2024-09-02T13:00:00",
+          "title": "Interview with Pat"
+        }
+      }
+    },
+    {
+      "id": "t15",
+      "type": "tool",
+      "latency_ms": 3358.3505420247093,
+      "ok": true,
+      "schema_valid": true,
+      "detail": {
+        "name_ok": true,
+        "arg_ok": true,
+        "pred_name": "search_email",
+        "pred_args": {
+          "from": "news@digest.com",
+          "query": "newsletter"
+        }
+      }
+    },
+    {
+      "id": "s01",
+      "type": "sheet",
+      "latency_ms": 1049.9310840386897,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT SUM(revenue) FROM sales"
+      }
+    },
+    {
+      "id": "s02",
+      "type": "sheet",
+      "latency_ms": 729.3033750029281,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT SUM(units) FROM sales WHERE region = 'North'"
+      }
+    },
+    {
+      "id": "s03",
+      "type": "sheet",
+      "latency_ms": 744.9202910065651,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT AVG(revenue) FROM sales WHERE product = 'Gadget'"
+      }
+    },
+    {
+      "id": "s04",
+      "type": "sheet",
+      "latency_ms": 657.0715410634875,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT count(*) FROM sales WHERE product = 'Widget'"
+      }
+    },
+    {
+      "id": "s05",
+      "type": "sheet",
+      "latency_ms": 1181.0959170106798,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT region, SUM(revenue) AS total_revenue\nFROM sales\nGROUP BY region"
+      }
+    },
+    {
+      "id": "s06",
+      "type": "sheet",
+      "latency_ms": 3228.168540983461,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT\n  rep,\n  SUM(revenue) AS total_revenue\nFROM sales\nGROUP BY\n  rep\nORDER BY\n  total_revenue DESC\nLIMIT 1"
+      }
+    },
+    {
+      "id": "s07",
+      "type": "sheet",
+      "latency_ms": 961.2347499933094,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT SUM(units) FROM sales WHERE month = '2024-02'"
+      }
+    },
+    {
+      "id": "s08",
+      "type": "sheet",
+      "latency_ms": 512.6091670244932,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT DISTINCT product FROM sales"
+      }
+    },
+    {
+      "id": "s09",
+      "type": "sheet",
+      "latency_ms": 614.0834160614759,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT MAX(units) FROM sales"
+      }
+    },
+    {
+      "id": "s10",
+      "type": "sheet",
+      "latency_ms": 784.3146659433842,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred_sql": "SELECT revenue FROM sales WHERE region = 'East' AND product = 'Widget'"
+      }
+    }
+  ],
+  "model_id": "gemma4-e4b"
+}

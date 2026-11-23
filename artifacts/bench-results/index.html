@@ -1,0 +1,155 @@
+<title>Model and UI Benchmarks</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single measured-report column, tables scroll inside their own box. */
+:root{
+  --bg:#f6f7f8; --surface:#ffffff; --fg:#16191d; --muted:#5b6470; --line:#dde1e6;
+  --accent:#2f5bd3; --ok:#1f7a4a; --bad:#b4372f; --bar:#9fb3e8;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111418; --surface:#181c21; --fg:#e7eaee; --muted:#9aa3ae; --line:#2b3138;
+  --accent:#7f9cf0; --ok:#5cc28c; --bad:#f07a70; --bar:#3a5099; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111418; --surface:#181c21; --fg:#e7eaee; --muted:#9aa3ae; --line:#2b3138;
+  --accent:#7f9cf0; --ok:#5cc28c; --bad:#f07a70; --bar:#3a5099; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.5}
+main{max-width:1040px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:36px}
+h1{font-size:1.7rem;margin:0;text-wrap:balance;font-weight:600}
+h2{font-size:1.15rem;margin:0 0 10px;font-weight:600}
+h3{font-size:.95rem;margin:18px 0 8px;font-weight:600}
+p{margin:0;max-width:70ch}
+.sub{color:var(--muted);margin-top:6px}
+section{display:grid;gap:10px;min-width:0}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.86rem}
+th,td{padding:7px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;background:var(--bg)}
+td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:inherit}
+tbody tr{background:var(--surface)}
+tr:last-child td{border-bottom:0}
+.mono{font-family:var(--mono);font-size:.8rem}
+.ok{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}
+.na{color:var(--muted)}
+.env{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 24px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.env div{min-width:0}.env b{display:block;font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:6px}
+.row{display:grid;grid-template-columns:150px 1fr 70px;gap:10px;align-items:center;font-size:.85rem}
+.track{position:relative;height:16px}
+.fill{position:absolute;left:0;top:2px;height:12px;background:var(--bar);border-radius:2px}
+.fill.over{background:var(--bad)}
+.limit{position:absolute;top:-4px;bottom:-4px;width:0;border-left:2px dashed var(--fg)}
+.val{text-align:right;font-variant-numeric:tabular-nums}
+.legend{font-size:.8rem;color:var(--muted)}
+ul{margin:0;padding-left:20px;display:grid;gap:4px;max-width:80ch}
+@media (max-width:560px){.row{grid-template-columns:96px 1fr 58px;font-size:.78rem}}
+</style>
+
+<main>
+<header>
+  <h1>Model and UI Benchmarks</h1>
+  <p class="sub">Measured 2026-11-20. Every number is copied from <span class="mono">bench/results/</span> (models.json, ui.json, raw/*.jsonl).</p>
+</header>
+
+<section>
+  <h2>Environment</h2>
+  <div class="env">
+    <div><b>Machine</b>Apple M1 Pro, 16 GB RAM, macOS 27.2.1</div>
+    <div><b>8 GB fit rule</b>No 8 GB machine available. "Fits" = peak RSS of llama-server ≤ 3.5 GB</div>
+    <div><b>Runtime</b>llama.cpp build 12359 (b1b770d90), Metal</div>
+    <div><b>Model settings</b>GGUF Q4_K_M, context 4096, temp 0, <span class="mono">--jinja --reasoning-budget 0 -np 1</span></div>
+    <div><b>UI A</b>Tauri 2 + React, Radix Popover, react-day-picker, cmdk, TanStack Table + Virtual</div>
+    <div><b>UI B</b>GPUI via gpui-kit 0.10.0 (gpui-component 0.10.0), nightly Rust</div>
+  </div>
+</section>
+
+<section>
+  <h2>Models: memory</h2>
+  <div class="chart" role="img" aria-label="Peak RSS per model against a 3.5 GB limit">
+    <div class="legend">Peak RSS (GB, decimal). Dashed line = 3.5 GB budget. Scale 0–4.5 GB.</div>
+    <div class="row"><span>functiongemma-270m</span><div class="track"><div class="fill" style="width:10.1%"></div><div class="limit" style="left:77.8%"></div></div><span class="val">0.46</span></div>
+    <div class="row"><span>qwen3.5-0.8b</span><div class="track"><div class="fill" style="width:23.2%"></div><div class="limit" style="left:77.8%"></div></div><span class="val">1.05</span></div>
+    <div class="row"><span>qwen3.5-2b</span><div class="track"><div class="fill" style="width:37.8%"></div><div class="limit" style="left:77.8%"></div></div><span class="val">1.70</span></div>
+    <div class="row"><span>gemma4-e2b</span><div class="track"><div class="fill" style="width:65.2%"></div><div class="limit" style="left:77.8%"></div></div><span class="val">2.93</span></div>
+    <div class="row"><span>phi4-mini</span><div class="track"><div class="fill" style="width:70.3%"></div><div class="limit" style="left:77.8%"></div></div><span class="val">3.16</span></div>
+    <div class="row"><span>qwen3.5-4b</span><div class="track"><div class="fill" style="width:77.2%"></div><div class="limit" style="left:77.8%"></div></div><span class="val">3.48</span></div>
+    <div class="row"><span>gemma4-e4b</span><div class="track"><div class="fill over" style="width:89.8%"></div><div class="limit" style="left:77.8%"></div></div><span class="val">4.04</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Models: speed, memory and quality</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Model</th><th>GGUF size (GB)</th><th>Peak RSS (GB)</th><th>Fits 3.5 GB</th><th>Load (s, median of 3)</th><th>Prompt tok/s (pp512)</th><th>Gen tok/s (tg128)</th><th>Mean latency / case (ms)</th></tr></thead>
+    <tbody>
+      <tr><td>qwen3.5-0.8b</td><td>0.53</td><td>1.05</td><td class="ok">yes</td><td>1.10</td><td>2333.0 ± 19.7</td><td>134.6 ± 3.9</td><td>447</td></tr>
+      <tr><td>qwen3.5-2b</td><td>1.28</td><td>1.70</td><td class="ok">yes</td><td>1.11</td><td>1094.3 ± 5.1</td><td>81.5 ± 0.4</td><td>588</td></tr>
+      <tr><td>qwen3.5-4b</td><td>2.74</td><td>3.48</td><td class="ok">yes</td><td>1.12</td><td>412.6 ± 8.6</td><td>37.6 ± 0.2</td><td>1252</td></tr>
+      <tr><td>gemma4-e2b</td><td>3.11</td><td>2.93</td><td class="ok">yes</td><td>1.65</td><td>1974.3 ± 75.0</td><td>60.3 ± 1.0</td><td>1375</td></tr>
+      <tr><td>gemma4-e4b</td><td>4.98</td><td>4.04</td><td class="bad">no</td><td>4.80</td><td>564.7 ± 19.6</td><td>34.7 ± 0.7</td><td>2492</td></tr>
+      <tr><td>phi4-mini</td><td>2.49</td><td>3.16</td><td class="ok">yes</td><td>1.69</td><td>523.5 ± 0.5</td><td>43.7 ± 3.4</td><td>1897</td></tr>
+      <tr><td>functiongemma-270m</td><td>0.25</td><td>0.46</td><td class="ok">yes</td><td>0.62</td><td>10926.7 ± 93.7</td><td>190.4 ± 21.2</td><td>192</td></tr>
+      <tr><td>Qwen3.6 / 3.8 ≤ 4B</td><td colspan="7" class="na" style="text-align:left">Not available: no GGUF found on Hugging Face (unsloth)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Quality on the golden set (40 cases)</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Model</th><th>Router acc. (15)</th><th>Tool name acc. (15)</th><th>Tool args exact (15)</th><th>Valid tool JSON (15)</th><th>SQL execution match (10)</th></tr></thead>
+    <tbody>
+      <tr><td>qwen3.5-0.8b</td><td>0.600</td><td>0.800</td><td>0.533</td><td>0.800</td><td>0.700</td></tr>
+      <tr><td>qwen3.5-2b</td><td>0.467</td><td>1.000</td><td>0.733</td><td>1.000</td><td>0.800</td></tr>
+      <tr><td>qwen3.5-4b</td><td>0.800</td><td>1.000</td><td>0.733</td><td>1.000</td><td>0.900</td></tr>
+      <tr><td>gemma4-e2b</td><td>0.667</td><td>0.933</td><td>0.667</td><td>0.933</td><td>0.800</td></tr>
+      <tr><td>gemma4-e4b</td><td>0.867</td><td>0.933</td><td>0.667</td><td>0.933</td><td>0.700</td></tr>
+      <tr><td>phi4-mini</td><td>0.667</td><td>0.000</td><td>0.000</td><td>0.000</td><td>0.800</td></tr>
+      <tr><td>functiongemma-270m</td><td>0.133</td><td class="na">not run</td><td class="na">not run</td><td class="na">not run</td><td class="na">not run</td></tr>
+    </tbody>
+  </table></div>
+  <p class="legend">Case counts in brackets. One case = 6.7 points on 15-case columns and 10 points on the SQL column. Models are not fine-tuned.</p>
+</section>
+
+<section>
+  <h2>UI: same screen in both stacks</h2>
+  <p class="legend">Screen: text input, date picker, multi-select, 10,000 × 6 table. 5 runs each. Median, with min–max in brackets. MiB = KB / 1024.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Metric</th><th>A: Tauri 2 + React</th><th>B: GPUI + gpui-kit</th></tr></thead>
+    <tbody>
+      <tr><td>App bundle size</td><td>5.4 MB</td><td>17.6 MB</td></tr>
+      <tr><td>Main binary size</td><td>5.3 MB</td><td>17.6 MB</td></tr>
+      <tr><td>Cold start to first frame (s)</td><td>1.34 (0.64–1.94)</td><td>0.24 (0.21–0.48)</td></tr>
+      <tr><td>Idle RSS, app + helpers (MiB)</td><td>205.4 (181.5–218.7)</td><td>84.2 (82.7–91.1)</td></tr>
+      <tr><td>Idle RSS, largest process (MiB)</td><td>91.1 (85.5–103.2)</td><td>84.2 (82.7–91.1)</td></tr>
+      <tr><td>Idle CPU, 30 s mean (%)</td><td>0.03 (0.00–0.34)</td><td>0.00 (0.00–0.00)</td></tr>
+      <tr><td>Peak RSS while scrolling 10 s (MiB)</td><td>217.0 (181.5–218.7)</td><td>100.3 (98.0–103.1)</td></tr>
+      <tr><td>CPU while scrolling, 10 s mean (%)</td><td>0.78 (0.54–3.64)</td><td>0.30 (0.17–0.40)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Components used (library only)</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Stack</th><th>Date picker</th><th>Multi-select</th><th>Virtualised table</th></tr></thead>
+    <tbody>
+      <tr><td>A: Tauri 2 + React</td><td>Radix Popover + react-day-picker</td><td>Radix Popover + cmdk Command</td><td>TanStack Table + TanStack Virtual</td></tr>
+      <tr><td>B: GPUI + gpui-kit</td><td>DatePicker</td><td>Combobox (multiple)</td><td>DataTable</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Measurement limits</h2>
+  <ul>
+    <li>Run on a 16 GB machine. The 8 GB result is the RSS rule above, not a run on 8 GB hardware.</li>
+    <li>Peak RSS is sampled with <span class="mono">ps</span> during the golden run. Physical footprint (vmmap / footprint) was not measured. gemma4-e2b peak RSS (2.93 GB) is below its file size (3.11 GB) because the model is memory-mapped and not every page was resident.</li>
+    <li>qwen3.5-4b peak RSS is 3.48 GB, 24 MB under the 3.5 GB budget.</li>
+    <li>phi4-mini returned no native tool calls through llama.cpp with <span class="mono">--jinja</span>. It answered with prose or pseudo-code (see <span class="mono">raw/phi4-mini.jsonl</span>), so all its tool scores are 0.</li>
+    <li>functiongemma-270m was scored on router cases only.</li>
+    <li>Golden set is small (15 router, 15 tool, 10 SQL). SQL is scored by DuckDB execution match against <span class="mono">fixtures/sales.csv</span>.</li>
+    <li>UI cold start signal differs: A fires after React commits the table rows; B fires at the first GPUI render, before paint. Caches were not purged; A runs before B. First-run values: A 1.88 s, B 0.48 s.</li>
+    <li>UI RSS for A = app process tree + WebKit helper processes that did not exist before launch (3 per run).</li>
+    <li>Input latency and frame timing were not measured.</li>
+  </ul>
+</section>
+</main>

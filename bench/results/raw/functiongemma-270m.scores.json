@@ -1,0 +1,178 @@
+{
+  "role": "router",
+  "n_cases": 15,
+  "router_accuracy": 0.13333333333333333,
+  "tool_name_accuracy": null,
+  "tool_arg_exact_match": null,
+  "schema_valid_json_rate": null,
+  "sql_execution_match_rate": null,
+  "mean_latency_ms": 192.23635580856353,
+  "cases": [
+    {
+      "id": "r01",
+      "type": "router",
+      "latency_ms": 530.4343749303371,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "email",
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r02",
+      "type": "router",
+      "latency_ms": 133.17712501157075,
+      "ok": true,
+      "schema_valid": null,
+      "detail": {
+        "pred": "calendar",
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r03",
+      "type": "router",
+      "latency_ms": 233.46241703256965,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r04",
+      "type": "router",
+      "latency_ms": 233.77829196397215,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r05",
+      "type": "router",
+      "latency_ms": 194.5885419845581,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": "general",
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "r06",
+      "type": "router",
+      "latency_ms": 136.3442080328241,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r07",
+      "type": "router",
+      "latency_ms": 154.42808403167874,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r08",
+      "type": "router",
+      "latency_ms": 212.9258339991793,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r09",
+      "type": "router",
+      "latency_ms": 156.0232089832425,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r10",
+      "type": "router",
+      "latency_ms": 134.35358298011124,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "escalate"
+      }
+    },
+    {
+      "id": "r11",
+      "type": "router",
+      "latency_ms": 122.6347500924021,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "email"
+      }
+    },
+    {
+      "id": "r12",
+      "type": "router",
+      "latency_ms": 167.54583304282278,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "calendar"
+      }
+    },
+    {
+      "id": "r13",
+      "type": "router",
+      "latency_ms": 190.37258403841406,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "sheet"
+      }
+    },
+    {
+      "id": "r14",
+      "type": "router",
+      "latency_ms": 155.3815839579329,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "general"
+      }
+    },
+    {
+      "id": "r15",
+      "type": "router",
+      "latency_ms": 128.0949170468375,
+      "ok": false,
+      "schema_valid": null,
+      "detail": {
+        "pred": null,
+        "expected": "escalate"
+      }
+    }
+  ],
+  "model_id": "functiongemma-270m"
+}

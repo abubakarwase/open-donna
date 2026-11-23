@@ -1,0 +1,23 @@
+{
+  "id": "functiongemma-270m",
+  "gguf_bytes": 253127904,
+  "peak_rss_kb": 444464,
+  "peak_rss_bytes": 455131136,
+  "fits_3_5gb": true,
+  "load_time_s_runs": [
+    1.084601879119873,
+    0.5687639713287354,
+    0.6196930408477783
+  ],
+  "load_time_s_median": 0.6196930408477783,
+  "load_time_s_final": 0.5753448009490967,
+  "llama_server_flags": [
+    "--jinja",
+    "-c",
+    "4096",
+    "--reasoning-budget",
+    "0",
+    "-np",
+    "1"
+  ]
+}

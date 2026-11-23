@@ -1,0 +1,11 @@
+# Model weights (multi-GB)
+*.gguf
+bench/models/gguf/
+# Python
+__pycache__/
+*.pyc
+# Rust / Node
+target/
+node_modules/
+# OS
+.DS_Store

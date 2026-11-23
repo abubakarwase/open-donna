@@ -1,0 +1,360 @@
+{
+  "rss_method": "total RSS = sum of RSS for (1) the launched process and all descendants via ppid BFS, plus (2) WebKit WebContent/Networking/GPU PIDs that exist after launch but were absent in a pre-launch snapshot. Unrelated pre-existing WebKit processes are excluded.",
+  "component_availability": {
+    "A_tauri_shadcn": {
+      "date_picker": {
+        "available": true,
+        "component": "Radix Popover + react-day-picker DayPicker"
+      },
+      "multi_select": {
+        "available": true,
+        "component": "Radix Popover + cmdk Command (multi)"
+      },
+      "virtualised_table": {
+        "available": true,
+        "component": "TanStack Table + TanStack Virtual"
+      }
+    },
+    "B_gpui_kit": {
+      "date_picker": {
+        "available": true,
+        "component": "gpui-component DatePicker"
+      },
+      "multi_select": {
+        "available": true,
+        "component": "gpui-component Combobox.multiple"
+      },
+      "virtualised_table": {
+        "available": true,
+        "component": "gpui-component DataTable"
+      }
+    }
+  },
+  "deps": {
+    "B": {
+      "crate": "gpui-kit",
+      "version": "0.10.0"
+    }
+  },
+  "A": {
+    "name": "A_tauri_shadcn",
+    "bundle_bytes": 5435392,
+    "binary_bytes": 5326848,
+    "cold_start_s": {
+      "median": 1.3436740000033751,
+      "min": 0.6418897919356823,
+      "max": 1.9376262910664082,
+      "n": 5,
+      "values": [
+        1.8794443750521168,
+        0.722002417081967,
+        1.3436740000033751,
+        1.9376262910664082,
+        0.6418897919356823
+      ]
+    },
+    "idle_rss_total_kb": {
+      "median": 210320,
+      "min": 185856,
+      "max": 223952,
+      "n": 5,
+      "values": [
+        202160,
+        223952,
+        185856,
+        213440,
+        210320
+      ]
+    },
+    "idle_rss_largest_kb": {
+      "median": 93328,
+      "min": 87584,
+      "max": 105648,
+      "n": 5,
+      "values": [
+        91296,
+        105648,
+        87584,
+        95200,
+        93328
+      ]
+    },
+    "idle_cpu_pct_mean_30s": {
+      "median": 0.025925925925925925,
+      "min": 0.0,
+      "max": 0.3423076923076923,
+      "n": 5,
+      "values": [
+        0.03333333333333333,
+        0.3423076923076923,
+        0.025925925925925925,
+        0.0,
+        0.0
+      ]
+    },
+    "scroll_peak_rss_kb": {
+      "median": 222224,
+      "min": 185856,
+      "max": 223952,
+      "n": 5,
+      "values": [
+        202160,
+        223952,
+        185856,
+        222224,
+        222896
+      ]
+    },
+    "scroll_cpu_pct_mean_10s": {
+      "median": 0.7764705882352941,
+      "min": 0.54375,
+      "max": 3.635294117647059,
+      "n": 5,
+      "values": [
+        0.7470588235294118,
+        3.635294117647059,
+        0.54375,
+        0.7764705882352941,
+        1.1058823529411765
+      ]
+    },
+    "runs": [
+      {
+        "cold_start_s": 1.8794443750521168,
+        "first_frame_ms_stdout": 1532.059,
+        "idle_rss_total_kb": 202160,
+        "idle_rss_largest_kb": 91296,
+        "idle_rss_largest_comm": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "idle_cpu_pct_mean_30s": 0.03333333333333333,
+        "scroll_peak_rss_kb": 202160,
+        "scroll_cpu_pct_mean_10s": 0.7470588235294118,
+        "pre_webkit_pid_count": 4,
+        "new_webkit_helper_pids": [
+          58279,
+          58280,
+          58282
+        ],
+        "stdout_tail": "FIRST_FRAME_MS 1532.059\n"
+      },
+      {
+        "cold_start_s": 0.722002417081967,
+        "first_frame_ms_stdout": 701.576,
+        "idle_rss_total_kb": 223952,
+        "idle_rss_largest_kb": 105648,
+        "idle_rss_largest_comm": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "idle_cpu_pct_mean_30s": 0.3423076923076923,
+        "scroll_peak_rss_kb": 223952,
+        "scroll_cpu_pct_mean_10s": 3.635294117647059,
+        "pre_webkit_pid_count": 4,
+        "new_webkit_helper_pids": [
+          76571,
+          76572,
+          76573
+        ],
+        "stdout_tail": "FIRST_FRAME_MS 701.576\n"
+      },
+      {
+        "cold_start_s": 1.3436740000033751,
+        "first_frame_ms_stdout": 1328.055,
+        "idle_rss_total_kb": 185856,
+        "idle_rss_largest_kb": 87584,
+        "idle_rss_largest_comm": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "idle_cpu_pct_mean_30s": 0.025925925925925925,
+        "scroll_peak_rss_kb": 185856,
+        "scroll_cpu_pct_mean_10s": 0.54375,
+        "pre_webkit_pid_count": 4,
+        "new_webkit_helper_pids": [
+          94638,
+          94639,
+          94664
+        ],
+        "stdout_tail": "FIRST_FRAME_MS 1328.055\n"
+      },
+      {
+        "cold_start_s": 1.9376262910664082,
+        "first_frame_ms_stdout": 1918.248,
+        "idle_rss_total_kb": 213440,
+        "idle_rss_largest_kb": 95200,
+        "idle_rss_largest_comm": "/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent",
+        "idle_cpu_pct_mean_30s": 0.0,
+        "scroll_peak_rss_kb": 222224,
+        "scroll_cpu_pct_mean_10s": 0.7764705882352941,
+        "pre_webkit_pid_count": 4,
+        "new_webkit_helper_pids": [
+          13423,
+          13461,
+          13468
+        ],
+        "stdout_tail": "FIRST_FRAME_MS 1918.248\n"
+      },
+      {
+        "cold_start_s": 0.6418897919356823,
+        "first_frame_ms_stdout": 630.462,
+        "idle_rss_total_kb": 210320,
+        "idle_rss_largest_kb": 93328,
+        "idle_rss_largest_comm": "/Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/tauri-shadcn/src-tauri/target/release/bundle/macos/tauri-shadcn.app/Contents/MacOS/tauri-shadcn",
+        "idle_cpu_pct_mean_30s": 0.0,
+        "scroll_peak_rss_kb": 222896,
+        "scroll_cpu_pct_mean_10s": 1.1058823529411765,
+        "pre_webkit_pid_count": 4,
+        "new_webkit_helper_pids": [
+          32238,
+          32248,
+          32261
+        ],
+        "stdout_tail": "FIRST_FRAME_MS 630.462\n"
+      }
+    ]
+  },
+  "B": {
+    "name": "B_gpui_kit",
+    "bundle_bytes": 17629184,
+    "binary_bytes": 17628336,
+    "cold_start_s": {
+      "median": 0.23964137502480298,
+      "min": 0.21448104199953377,
+      "max": 0.48163662489969283,
+      "n": 5,
+      "values": [
+        0.48163662489969283,
+        0.21448104199953377,
+        0.2343752080341801,
+        0.2872676249826327,
+        0.23964137502480298
+      ]
+    },
+    "idle_rss_total_kb": {
+      "median": 86224,
+      "min": 84720,
+      "max": 93248,
+      "n": 5,
+      "values": [
+        93248,
+        84720,
+        84864,
+        86224,
+        86640
+      ]
+    },
+    "idle_rss_largest_kb": {
+      "median": 86224,
+      "min": 84720,
+      "max": 93248,
+      "n": 5,
+      "values": [
+        93248,
+        84720,
+        84864,
+        86224,
+        86640
+      ]
+    },
+    "idle_cpu_pct_mean_30s": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "n": 5,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "scroll_peak_rss_kb": {
+      "median": 102672,
+      "min": 100320,
+      "max": 105584,
+      "n": 5,
+      "values": [
+        105584,
+        104672,
+        102544,
+        102672,
+        100320
+      ]
+    },
+    "scroll_cpu_pct_mean_10s": {
+      "median": 0.3,
+      "min": 0.16666666666666666,
+      "max": 0.4,
+      "n": 5,
+      "values": [
+        0.3,
+        0.4,
+        0.16666666666666669,
+        0.16666666666666666,
+        0.39999999999999997
+      ]
+    },
+    "runs": [
+      {
+        "cold_start_s": 0.48163662489969283,
+        "first_frame_ms_stdout": 293.687,
+        "idle_rss_total_kb": 93248,
+        "idle_rss_largest_kb": 93248,
+        "idle_rss_largest_comm": "/Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/gpui-component/target/release/gpui-bench",
+        "idle_cpu_pct_mean_30s": 0.0,
+        "scroll_peak_rss_kb": 105584,
+        "scroll_cpu_pct_mean_10s": 0.3,
+        "pre_webkit_pid_count": 0,
+        "new_webkit_helper_pids": [],
+        "stdout_tail": "FIRST_FRAME_MS 293.687\n"
+      },
+      {
+        "cold_start_s": 0.21448104199953377,
+        "first_frame_ms_stdout": 205.23,
+        "idle_rss_total_kb": 84720,
+        "idle_rss_largest_kb": 84720,
+        "idle_rss_largest_comm": "/Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/gpui-component/target/release/gpui-bench",
+        "idle_cpu_pct_mean_30s": 0.0,
+        "scroll_peak_rss_kb": 104672,
+        "scroll_cpu_pct_mean_10s": 0.4,
+        "pre_webkit_pid_count": 0,
+        "new_webkit_helper_pids": [],
+        "stdout_tail": "FIRST_FRAME_MS 205.230\n"
+      },
+      {
+        "cold_start_s": 0.2343752080341801,
+        "first_frame_ms_stdout": 225.242,
+        "idle_rss_total_kb": 84864,
+        "idle_rss_largest_kb": 84864,
+        "idle_rss_largest_comm": "/Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/gpui-component/target/release/gpui-bench",
+        "idle_cpu_pct_mean_30s": 0.0,
+        "scroll_peak_rss_kb": 102544,
+        "scroll_cpu_pct_mean_10s": 0.16666666666666669,
+        "pre_webkit_pid_count": 0,
+        "new_webkit_helper_pids": [],
+        "stdout_tail": "FIRST_FRAME_MS 225.242\n"
+      },
+      {
+        "cold_start_s": 0.2872676249826327,
+        "first_frame_ms_stdout": 277.793,
+        "idle_rss_total_kb": 86224,
+        "idle_rss_largest_kb": 86224,
+        "idle_rss_largest_comm": "/Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/gpui-component/target/release/gpui-bench",
+        "idle_cpu_pct_mean_30s": 0.0,
+        "scroll_peak_rss_kb": 102672,
+        "scroll_cpu_pct_mean_10s": 0.16666666666666666,
+        "pre_webkit_pid_count": 0,
+        "new_webkit_helper_pids": [],
+        "stdout_tail": "FIRST_FRAME_MS 277.793\n"
+      },
+      {
+        "cold_start_s": 0.23964137502480298,
+        "first_frame_ms_stdout": 231.081,
+        "idle_rss_total_kb": 86640,
+        "idle_rss_largest_kb": 86640,
+        "idle_rss_largest_comm": "/Users/abubakarwase/Desktop/personal/node/assistant/bench/ui/gpui-component/target/release/gpui-bench",
+        "idle_cpu_pct_mean_30s": 0.0,
+        "scroll_peak_rss_kb": 100320,
+        "scroll_cpu_pct_mean_10s": 0.39999999999999997,
+        "pre_webkit_pid_count": 0,
+        "new_webkit_helper_pids": [],
+        "stdout_tail": "FIRST_FRAME_MS 231.081\n"
+      }
+    ],
+    "bundle_note": "no .app bundle; bundle_bytes is du of binary path; binary_bytes is main binary"
+  }
+}

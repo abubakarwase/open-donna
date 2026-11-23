@@ -1,0 +1,23 @@
+{
+  "id": "qwen35-0.8b",
+  "gguf_bytes": 532517120,
+  "peak_rss_kb": 1020688,
+  "peak_rss_bytes": 1045184512,
+  "fits_3_5gb": true,
+  "load_time_s_runs": [
+    1.106614112854004,
+    1.0952951908111572,
+    1.100898027420044
+  ],
+  "load_time_s_median": 1.100898027420044,
+  "load_time_s_final": 1.1155190467834473,
+  "llama_server_flags": [
+    "--jinja",
+    "-c",
+    "4096",
+    "--reasoning-budget",
+    "0",
+    "-np",
+    "1"
+  ]
+}

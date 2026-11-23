@@ -1,0 +1,509 @@
+{
+  "environment": {
+    "machine": "Apple M1 Pro, 16 GB RAM, macOS 27.2.1",
+    "note": "No 8 GB machine available. Fits 8 GB := peak RSS of base model process \u2264 3.5 GB.",
+    "quant": "Q4_K_M",
+    "context": 4096
+  },
+  "models": [
+    {
+      "id": "qwen35-0.8b",
+      "hf_repo": "unsloth/Qwen3.5-0.8B-GGUF",
+      "file": "Qwen3.5-0.8B-Q4_K_M.gguf",
+      "role": "base",
+      "status": "measured",
+      "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517",
+      "gguf_bytes": 532517120,
+      "speed": {
+        "id": "qwen35-0.8b",
+        "pp512_tok_s": {
+          "mean": 2332.996,
+          "std": 19.737802055953377,
+          "n": 5,
+          "values": [
+            2329.02,
+            2323.12,
+            2311.55,
+            2337.19,
+            2364.1
+          ]
+        },
+        "tg128_tok_s": {
+          "mean": 134.6152,
+          "std": 3.913035484122273,
+          "n": 5,
+          "values": [
+            139.984,
+            136.815,
+            134.451,
+            130.644,
+            131.182
+          ]
+        }
+      },
+      "memory": {
+        "id": "qwen35-0.8b",
+        "gguf_bytes": 532517120,
+        "peak_rss_kb": 1020688,
+        "peak_rss_bytes": 1045184512,
+        "fits_3_5gb": true,
+        "load_time_s_runs": [
+          1.106614112854004,
+          1.0952951908111572,
+          1.100898027420044
+        ],
+        "load_time_s_median": 1.100898027420044,
+        "load_time_s_final": 1.1155190467834473,
+        "llama_server_flags": [
+          "--jinja",
+          "-c",
+          "4096",
+          "--reasoning-budget",
+          "0",
+          "-np",
+          "1"
+        ]
+      },
+      "quality": {
+        "role": "base",
+        "n_cases": 40,
+        "router_accuracy": 0.6,
+        "tool_name_accuracy": 0.8,
+        "tool_arg_exact_match": 0.5333333333333333,
+        "schema_valid_json_rate": 0.8,
+        "sql_execution_match_rate": 0.7,
+        "mean_latency_ms": 447.1548906934913
+      }
+    },
+    {
+      "id": "qwen35-2b",
+      "hf_repo": "unsloth/Qwen3.5-2B-GGUF",
+      "file": "Qwen3.5-2B-Q4_K_M.gguf",
+      "role": "base",
+      "status": "measured",
+      "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223",
+      "gguf_bytes": 1280835840,
+      "speed": {
+        "id": "qwen35-2b",
+        "pp512_tok_s": {
+          "mean": 1094.252,
+          "std": 5.07285619744939,
+          "n": 5,
+          "values": [
+            1096.94,
+            1092.93,
+            1089.61,
+            1101.68,
+            1090.1
+          ]
+        },
+        "tg128_tok_s": {
+          "mean": 81.50096,
+          "std": 0.39649908953237206,
+          "n": 5,
+          "values": [
+            81.9227,
+            81.251,
+            81.7571,
+            81.6271,
+            80.9469
+          ]
+        }
+      },
+      "memory": {
+        "id": "qwen35-2b",
+        "gguf_bytes": 1280835840,
+        "peak_rss_kb": 1663168,
+        "peak_rss_bytes": 1703084032,
+        "fits_3_5gb": true,
+        "load_time_s_runs": [
+          1.6405408382415771,
+          1.1023149490356445,
+          1.1064348220825195
+        ],
+        "load_time_s_median": 1.1064348220825195,
+        "load_time_s_final": 1.0910568237304688,
+        "llama_server_flags": [
+          "--jinja",
+          "-c",
+          "4096",
+          "--reasoning-budget",
+          "0",
+          "-np",
+          "1"
+        ]
+      },
+      "quality": {
+        "role": "base",
+        "n_cases": 40,
+        "router_accuracy": 0.4666666666666667,
+        "tool_name_accuracy": 1.0,
+        "tool_arg_exact_match": 0.7333333333333333,
+        "schema_valid_json_rate": 1.0,
+        "sql_execution_match_rate": 0.8,
+        "mean_latency_ms": 588.06501563231
+      }
+    },
+    {
+      "id": "qwen35-4b",
+      "hf_repo": "unsloth/Qwen3.5-4B-GGUF",
+      "file": "Qwen3.5-4B-Q4_K_M.gguf",
+      "role": "base",
+      "status": "measured",
+      "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+      "gguf_bytes": 2740937888,
+      "speed": {
+        "id": "qwen35-4b",
+        "pp512_tok_s": {
+          "mean": 412.56100000000004,
+          "std": 8.594592835032959,
+          "n": 5,
+          "values": [
+            415.36,
+            418.642,
+            410.612,
+            398.54,
+            419.651
+          ]
+        },
+        "tg128_tok_s": {
+          "mean": 37.60146,
+          "std": 0.2289790994828991,
+          "n": 5,
+          "values": [
+            37.2334,
+            37.5684,
+            37.6935,
+            37.664,
+            37.848
+          ]
+        }
+      },
+      "memory": {
+        "id": "qwen35-4b",
+        "gguf_bytes": 2740937888,
+        "peak_rss_kb": 3394576,
+        "peak_rss_bytes": 3476045824,
+        "fits_3_5gb": true,
+        "load_time_s_runs": [
+          1.6647827625274658,
+          1.1204628944396973,
+          1.0970790386199951
+        ],
+        "load_time_s_median": 1.1204628944396973,
+        "load_time_s_final": 1.1443710327148438,
+        "llama_server_flags": [
+          "--jinja",
+          "-c",
+          "4096",
+          "--reasoning-budget",
+          "0",
+          "-np",
+          "1"
+        ]
+      },
+      "quality": {
+        "role": "base",
+        "n_cases": 40,
+        "router_accuracy": 0.8,
+        "tool_name_accuracy": 1.0,
+        "tool_arg_exact_match": 0.7333333333333333,
+        "schema_valid_json_rate": 1.0,
+        "sql_execution_match_rate": 0.9,
+        "mean_latency_ms": 1251.9756937777856
+      }
+    },
+    {
+      "id": "gemma4-e2b",
+      "hf_repo": "unsloth/gemma-4-E2B-it-GGUF",
+      "file": "gemma-4-E2B-it-Q4_K_M.gguf",
+      "role": "base",
+      "status": "measured",
+      "sha256": "740185b21d22ceb83a11c3aa62ad5842ef32c70f6096d756bbee85a1e4ec34b8",
+      "gguf_bytes": 3106738272,
+      "speed": {
+        "id": "gemma4-e2b",
+        "pp512_tok_s": {
+          "mean": 1974.316,
+          "std": 75.04359686209077,
+          "n": 5,
+          "values": [
+            1922.99,
+            1869.19,
+            2047.72,
+            2014.48,
+            2017.2
+          ]
+        },
+        "tg128_tok_s": {
+          "mean": 60.27118,
+          "std": 1.0197368444848893,
+          "n": 5,
+          "values": [
+            58.7836,
+            60.1448,
+            61.3176,
+            61.1357,
+            59.9742
+          ]
+        }
+      },
+      "memory": {
+        "id": "gemma4-e2b",
+        "gguf_bytes": 3106738272,
+        "peak_rss_kb": 2865184,
+        "peak_rss_bytes": 2933948416,
+        "fits_3_5gb": true,
+        "load_time_s_runs": [
+          2.1737849712371826,
+          1.618556261062622,
+          1.6534316539764404
+        ],
+        "load_time_s_median": 1.6534316539764404,
+        "load_time_s_final": 2.1479179859161377,
+        "llama_server_flags": [
+          "--jinja",
+          "-c",
+          "4096",
+          "--reasoning-budget",
+          "0",
+          "-np",
+          "1"
+        ]
+      },
+      "quality": {
+        "role": "base",
+        "n_cases": 40,
+        "router_accuracy": 0.6666666666666666,
+        "tool_name_accuracy": 0.9333333333333333,
+        "tool_arg_exact_match": 0.6666666666666666,
+        "schema_valid_json_rate": 0.9333333333333333,
+        "sql_execution_match_rate": 0.8,
+        "mean_latency_ms": 1374.6395301481243
+      }
+    },
+    {
+      "id": "gemma4-e4b",
+      "hf_repo": "unsloth/gemma-4-E4B-it-GGUF",
+      "file": "gemma-4-E4B-it-Q4_K_M.gguf",
+      "role": "base",
+      "status": "measured",
+      "sha256": "85a896a047553e842f25297ee5b031d64ff30147d9c4af17b1e4b394cd1fab87",
+      "gguf_bytes": 4977171584,
+      "speed": {
+        "id": "gemma4-e4b",
+        "pp512_tok_s": {
+          "mean": 564.6652,
+          "std": 19.627428096925996,
+          "n": 5,
+          "values": [
+            540.826,
+            548.249,
+            581.35,
+            585.023,
+            567.878
+          ]
+        },
+        "tg128_tok_s": {
+          "mean": 34.71718,
+          "std": 0.6769444452833638,
+          "n": 5,
+          "values": [
+            34.2804,
+            35.203,
+            35.228,
+            33.7342,
+            35.1403
+          ]
+        }
+      },
+      "memory": {
+        "id": "gemma4-e4b",
+        "gguf_bytes": 4977171584,
+        "peak_rss_kb": 3946544,
+        "peak_rss_bytes": 4041261056,
+        "fits_3_5gb": false,
+        "load_time_s_runs": [
+          6.019152879714966,
+          4.7982587814331055,
+          3.7439522743225098
+        ],
+        "load_time_s_median": 4.7982587814331055,
+        "load_time_s_final": 3.3503100872039795,
+        "llama_server_flags": [
+          "--jinja",
+          "-c",
+          "4096",
+          "--reasoning-budget",
+          "0",
+          "-np",
+          "1"
+        ]
+      },
+      "quality": {
+        "role": "base",
+        "n_cases": 40,
+        "router_accuracy": 0.8666666666666667,
+        "tool_name_accuracy": 0.9333333333333333,
+        "tool_arg_exact_match": 0.6666666666666666,
+        "schema_valid_json_rate": 0.9333333333333333,
+        "sql_execution_match_rate": 0.7,
+        "mean_latency_ms": 2491.831744744559
+      }
+    },
+    {
+      "id": "phi4-mini",
+      "hf_repo": "unsloth/Phi-4-mini-instruct-GGUF",
+      "file": "Phi-4-mini-instruct-Q4_K_M.gguf",
+      "role": "base",
+      "status": "measured",
+      "sha256": "88c00229914083cd112853aab84ed51b87bdf6b9ce42f532d8c85c7c63b1730a",
+      "gguf_bytes": 2491874272,
+      "speed": {
+        "id": "phi4-mini",
+        "pp512_tok_s": {
+          "mean": 523.4934000000001,
+          "std": 0.4962436901362138,
+          "n": 5,
+          "values": [
+            522.82,
+            523.132,
+            523.7,
+            523.995,
+            523.82
+          ]
+        },
+        "tg128_tok_s": {
+          "mean": 43.73078,
+          "std": 3.3875967081398572,
+          "n": 5,
+          "values": [
+            46.4643,
+            46.4676,
+            38.7909,
+            41.677,
+            45.2541
+          ]
+        }
+      },
+      "memory": {
+        "id": "phi4-mini",
+        "gguf_bytes": 2491874272,
+        "peak_rss_kb": 3088032,
+        "peak_rss_bytes": 3162144768,
+        "fits_3_5gb": true,
+        "load_time_s_runs": [
+          1.733842134475708,
+          1.3267109394073486,
+          1.6906681060791016
+        ],
+        "load_time_s_median": 1.6906681060791016,
+        "load_time_s_final": 1.1127359867095947,
+        "llama_server_flags": [
+          "--jinja",
+          "-c",
+          "4096",
+          "--reasoning-budget",
+          "0",
+          "-np",
+          "1"
+        ]
+      },
+      "quality": {
+        "role": "base",
+        "n_cases": 40,
+        "router_accuracy": 0.6666666666666666,
+        "tool_name_accuracy": 0.0,
+        "tool_arg_exact_match": 0.0,
+        "schema_valid_json_rate": 0.0,
+        "sql_execution_match_rate": 0.8,
+        "mean_latency_ms": 1896.9394364830805
+      }
+    },
+    {
+      "id": "functiongemma-270m",
+      "hf_repo": "unsloth/functiongemma-270m-it-GGUF",
+      "file": "functiongemma-270m-it-Q4_K_M.gguf",
+      "role": "router",
+      "status": "measured",
+      "sha256": "7474135cf63b5de86bd29d2feb92c644d48e9df5e1ac31550662af373c67d0fc",
+      "gguf_bytes": 253127904,
+      "speed": {
+        "id": "functiongemma-270m",
+        "pp512_tok_s": {
+          "mean": 10926.74,
+          "std": 93.71706354768054,
+          "n": 5,
+          "values": [
+            11057.5,
+            10839.0,
+            10985.0,
+            10906.2,
+            10846.0
+          ]
+        },
+        "tg128_tok_s": {
+          "mean": 190.3814,
+          "std": 21.202154685314408,
+          "n": 5,
+          "values": [
+            202.937,
+            205.289,
+            181.416,
+            156.979,
+            205.286
+          ]
+        }
+      },
+      "memory": {
+        "id": "functiongemma-270m",
+        "gguf_bytes": 253127904,
+        "peak_rss_kb": 444464,
+        "peak_rss_bytes": 455131136,
+        "fits_3_5gb": true,
+        "load_time_s_runs": [
+          1.084601879119873,
+          0.5687639713287354,
+          0.6196930408477783
+        ],
+        "load_time_s_median": 0.6196930408477783,
+        "load_time_s_final": 0.5753448009490967,
+        "llama_server_flags": [
+          "--jinja",
+          "-c",
+          "4096",
+          "--reasoning-budget",
+          "0",
+          "-np",
+          "1"
+        ]
+      },
+      "quality": {
+        "role": "router",
+        "n_cases": 15,
+        "router_accuracy": 0.13333333333333333,
+        "tool_name_accuracy": null,
+        "tool_arg_exact_match": null,
+        "schema_valid_json_rate": null,
+        "sql_execution_match_rate": null,
+        "mean_latency_ms": 192.23635580856353
+      }
+    },
+    {
+      "id": "qwen36-le4b",
+      "hf_repo": "unsloth/Qwen",
+      "file": null,
+      "role": "base",
+      "status": "not available",
+      "reason": "Qwen3.6 \u22644B GGUF not available on Hugging Face (checked unsloth/Qwen)"
+    },
+    {
+      "id": "qwen38-le4b",
+      "hf_repo": "unsloth/Qwen",
+      "file": null,
+      "role": "base",
+      "status": "not available",
+      "reason": "Qwen3.8 \u22644B GGUF not available on Hugging Face (checked unsloth/Qwen)"
+    }
+  ]
+}
